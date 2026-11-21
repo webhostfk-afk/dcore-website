@@ -29,7 +29,7 @@ export default function HeroSlider({ slides, delay, width, height }: { slides: S
 
   useEffect(() => {
     if (prev === null) return;
-    const t = setTimeout(() => setPrev(null), 760);
+    const t = setTimeout(() => setPrev(null), 1060);
     return () => clearTimeout(t);
   }, [prev]);
 
@@ -41,7 +41,7 @@ export default function HeroSlider({ slides, delay, width, height }: { slides: S
             <div
               key={s.src + k}
               className={`absolute inset-0 ${k === prev ? "z-[2]" : k === i ? "z-[1]" : "pointer-events-none z-0 opacity-0"}`}
-              style={k === prev ? { animation: "otech-crop 700ms cubic-bezier(0.55, 0, 0.3, 1) forwards" } : undefined}
+              style={k === prev ? { animation: "otech-crop 1000ms cubic-bezier(0.16, 1, 0.3, 1) forwards" } : undefined}
             >
               <Link href={s.href || "#"} className="block h-full">
                 <img src={s.src} alt={s.alt} width={width} height={height} className="block size-full object-cover" loading={k === 0 ? "eager" : "lazy"} />
