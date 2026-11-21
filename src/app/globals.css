@@ -1,0 +1,189 @@
+/*
+ * Tailwind v4 with the usual preflight (global reset). The Bootstrap 3 + Journal3 CSS of the original shop is gone;
+ * the few things it provided (fonts, page background, icon fonts, the look of scraped vendor HTML) are below.
+ */
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+/*
+ * Tailwind only scans the files listed below (source(none) + @source). Add a file here when it is created.
+ */
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@source "../components/layout/Footer.tsx";
+@source "../components/layout/NewsletterForm.tsx";
+@source "../components/layout/Breadcrumb.tsx";
+@source "../components/category/CatCard.tsx";
+@source "../components/category/CategoryBrowser.tsx";
+@source "../components/category/PriceSlider.tsx";
+@source "../components/layout/DesktopHeader.tsx";
+@source "../components/layout/DesktopMenu.tsx";
+@source "../components/layout/HeaderShell.tsx";
+@source "../components/layout/Header.tsx";
+@source "../components/layout/HeaderParts.tsx";
+@source "../components/layout/MobileHeader.tsx";
+@source "../components/layout/MobileMenu.tsx";
+@source "../components/home/SeoText.tsx";
+@source "../components/home/HomeContent.tsx";
+@source "../components/product/ProductDetail.tsx";
+@source "../components/shop/CartView.tsx";
+@source "../components/shop/SearchForm.tsx";
+@source "../components/shop/ModulePopup.tsx";
+@source "../components/shop/AskPriceModal.tsx";
+@source "../components/layout/SideMenu.tsx";
+@source "../components/shop/Toasts.tsx";
+@source "../components/shop/CartNotice.tsx";
+@source "../components/shop/CheckoutView.tsx";
+@source "../components/shop/CompareView.tsx";
+@source "../components/layout/PageTitle.tsx";
+@source "../components/product/RelatedProducts.tsx";
+@source "../components/home/HomeProducts.tsx";
+@source "../components/home/HomeCardButtons.tsx";
+@source "../components/home/ProductCarousel.tsx";
+@source "../components/home/CategoryBlocks.tsx";
+@source "../components/home/HeroSlider.tsx";
+@source "../components/home/BrandCarousel.tsx";
+
+/* ---- design tokens of the shop (values read from the original theme) ---- */
+@theme {
+  --font-sans: "trebuc-webfont", Arial, sans-serif;
+
+  --color-ink: #1a202c; /* headings, dark buttons, top bar */
+  --color-body: #4a5568;
+  --color-brand: #db2427; /* the red of prices, buttons and links on hover */
+  --color-brand-dark: #b81d20;
+  --color-link: #3c5fa5;
+  --color-page: #f2f3f7; /* page background */
+  --color-line: #e2e2e2;
+  --color-footer: #07131e;
+  --color-footer-bar: #0f1e2d;
+}
+
+@font-face {
+  font-family: "trebuc-webfont";
+  src: url("/font/trebuc-webfont.woff2") format("woff2"), url("/font/trebuc-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("/fonts/icomoon.woff2") format("woff2"), url("/fonts/icomoon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url("/fonts/fontawesome-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@layer base {
+  html {
+    font-size: 10px;
+  }
+  body {
+    background: #f2f3f7;
+    color: #333;
+    font-family: "trebuc-webfont", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* the four Font Awesome icons that are still used */
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .fa-check-circle::before { content: "\f058"; }
+  .fa-info-circle::before { content: "\f05a"; }
+  .fa-question-circle::before { content: "\f059"; }
+  .fa-star-o::before { content: "\f006"; }
+}
+
+/* Scraped vendor HTML (descriptions, text blocks under the products): give it back the browser defaults the reset removed */
+@layer components {
+  .legacy-html h1, .legacy-html h2, .legacy-html h3, .legacy-html h4, .legacy-html h5, .legacy-html h6 {
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 15px 0;
+  }
+  .legacy-html h1 { font-size: 30px; }
+  .legacy-html h2 { font-size: 25px; }
+  .legacy-html h3 { font-size: 20px; }
+  .legacy-html h4 { font-size: 18px; }
+  .legacy-html h5 { font-size: 15px; }
+  .legacy-html h6 { font-size: 12px; }
+  .legacy-html p { margin: 0; }
+  .legacy-html ul { list-style: disc; padding-left: 40px; margin: 0 0 10px; }
+  .legacy-html ol { list-style: decimal; padding-left: 40px; margin: 0 0 10px; }
+  .legacy-html li { display: list-item; }
+  .legacy-html a { color: #337ab7; text-decoration: none; }
+  .legacy-html a:hover { color: #23527c; text-decoration: underline; }
+  .legacy-html b, .legacy-html strong { font-weight: 700; }
+  .legacy-html img { display: inline-block; max-width: 100%; height: auto; }
+  .legacy-html table { border-collapse: collapse; max-width: 100%; margin-bottom: 20px; }
+  .legacy-html td, .legacy-html th { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+  .legacy-html th { text-align: left; }
+  .legacy-html hr { margin: 20px 0; border-top: 1px solid #eee; }
+}
+
+/* Notice bar under the brands: the original <marquee>, scrolling right to left, stopping while hovered */
+.otech-marquee-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: otech-marquee 45s linear infinite;
+}
+.otech-marquee:hover .otech-marquee-track {
+  animation-play-state: paused;
+}
+@keyframes otech-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* animated background of the "Offer" button in the header */
+@keyframes otech-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.otech-fade {
+  animation: otech-fade-in 0.2s ease-out;
+}
+@keyframes otech-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* hero banner: cropped from the right edge to the left, uncovering the next banner under it (nothing moves) */
+@keyframes otech-crop {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 100% 0 0);
+  }
+}

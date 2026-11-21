@@ -1,0 +1,35 @@
+export type Img = { src: string; alt: string; width?: number; height?: number };
+export type Link = { label: string; href: string };
+export type MenuNode = { label: string; href: string; children?: MenuNode[] };
+export type Product = {
+  id: string;
+  name: string;
+  href: string;
+  image: Img | null;
+  imageSecond: Img | null;
+  price: string | null;
+  oldPrice: string | null;
+  label: string | null;
+  requestPrice: boolean;
+};
+export type ProductSection = { moduleId: number; row: number; title: string; seeAll: string; products: Product[] };
+export type HomeData = {
+  meta: { title: string; description: string; keywords: string; ogImage: string };
+  topLeft: Link[];
+  topRight: Link[];
+  logo: Img & { href: string };
+  headerLinks: { label: string; sub: string; href: string; badge: string | null }[];
+  menu: MenuNode[];
+  sliderLeft: (Img & { href: string })[];
+  sliderRight: (Img & { href: string })[];
+  sliderOptions: { left: string; right: string };
+  brands: { name: string; href: string; image: Img }[];
+  notice: string;
+  categoriesTitle: string;
+  categoriesSubtitle: string;
+  categories: { title: string; href: string; image: Img }[];
+  bannersTop: { href: string; image: Img | null }[];
+  bannersBottom: { href: string; image: Img | null }[];
+  productSections: ProductSection[];
+  sideLinks: { href: string; n: number }[];
+};

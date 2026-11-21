@@ -1,0 +1,94 @@
+{
+ "339": {
+  "htmlClass": "desktop mozilla oc30 popup popup-module is-guest route-journal3-popup-page store-0 skin-1 desktop-header-active mobile-sticky no-currency module-popup-339 layout-4",
+  "kind": "slider",
+  "title": "",
+  "slides": [
+   {
+    "src": "/image/cache/catalog/Online%20Payment/otech-bd-bkash-qr-payment-345x530w.jpg",
+    "alt": "Bkash"
+   },
+   {
+    "src": "/image/cache/catalog/Online%20Payment/OTECH-Nagad-QR-Payment-345x530w.jpg",
+    "alt": "Nagad"
+   },
+   {
+    "src": "/image/cache/catalog/Online%20Payment/OTECH-Rocket-QR-Payment-345x530w.jpg",
+    "alt": "Bank Payment"
+   }
+  ],
+  "fields": []
+ },
+ "378": {
+  "htmlClass": "desktop mozilla oc30 popup popup-module is-guest route-journal3-popup-page store-0 skin-1 desktop-header-active mobile-sticky no-currency module-popup-378 layout-4",
+  "kind": "form",
+  "title": "Become A Dealer",
+  "slides": [],
+  "fields": [
+   {
+    "label": "Name",
+    "name": "item[1]",
+    "type": "text",
+    "placeholder": "Name",
+    "required": true
+   },
+   {
+    "label": "Phone",
+    "name": "item[2]",
+    "type": "tel",
+    "placeholder": "Phone",
+    "required": true
+   },
+   {
+    "label": "Email",
+    "name": "item[3]",
+    "type": "email",
+    "placeholder": "Email",
+    "required": true
+   },
+   {
+    "label": "Company Name",
+    "name": "item[4]",
+    "type": "text",
+    "placeholder": "Company Name",
+    "required": false
+   }
+  ]
+ },
+ "379": {
+  "htmlClass": "desktop mozilla oc30 popup popup-module is-guest route-journal3-popup-page store-0 skin-1 desktop-header-active mobile-sticky no-currency module-popup-379 layout-4",
+  "kind": "form",
+  "title": "Corporate Deal",
+  "slides": [],
+  "fields": [
+   {
+    "label": "Name",
+    "name": "item[1]",
+    "type": "text",
+    "placeholder": "Name",
+    "required": true
+   },
+   {
+    "label": "Phone",
+    "name": "item[2]",
+    "type": "tel",
+    "placeholder": "Phone",
+    "required": true
+   },
+   {
+    "label": "Email",
+    "name": "item[3]",
+    "type": "email",
+    "placeholder": "Email",
+    "required": true
+   },
+   {
+    "label": "Company Name",
+    "name": "item[4]",
+    "type": "text",
+    "placeholder": "Company Name",
+    "required": false
+   }
+  ]
+ }
+}
