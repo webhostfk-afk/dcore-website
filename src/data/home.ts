@@ -1692,13 +1692,13 @@ export const home: HomeData = {
           "name": "MikroTik CCR2004-1G-12S+2XS Cloud Core Router",
           "href": "/mikrotik-ccr2004-1g-12s2xs-cloud-core-router",
           "image": {
-            "src": "/image/cache/catalog/Mikrotik/MikroTik%20CCR2004-1G-12S+2XS%20Cloud%20Core%20Router/MikroTik-CCR2004-1G-12S+2XS-Cloud-Core-Router2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/MikroTik%20CCR2004-1G-12S+2XS%20Cloud%20Core%20Router/MikroTik-CCR2004-1G-12S+2XS-Cloud-Core-Router2-250x250.jpg.webp",
             "alt": "MikroTik CCR2004-1G-12S+2XS Cloud Core Router",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Mikrotik/MikroTik%20CCR2004-1G-12S+2XS%20Cloud%20Core%20Router/MikroTik-CCR2004-1G-12S+2XS-Cloud-Core-Router3-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/MikroTik%20CCR2004-1G-12S+2XS%20Cloud%20Core%20Router/MikroTik-CCR2004-1G-12S+2XS-Cloud-Core-Router3-250x250.jpg.webp",
             "alt": "MikroTik CCR2004-1G-12S+2XS Cloud Core Router",
             "width": 250,
             "height": 250
@@ -1713,13 +1713,13 @@ export const home: HomeData = {
           "name": "Mikrotik CCR2116-12G-4S+ 16-Core ARM CPU 4x 10G SFP+ Cloud Core Ethernet Router",
           "href": "/mikrotik-ccr2116-12g-4s-16-core-arm-cpu-4x-10g-sfp-cloud-core-ethernet-router",
           "image": {
-            "src": "/image/cache/catalog/Mikrotik/CCR2116-12G-4S+/CCR2116-12G-4S+_P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/CCR2116-12G-4S+/CCR2116-12G-4S+_P1-250x250.jpg.webp",
             "alt": "Mikrotik CCR2116-12G-4S+ 16-Core ARM CPU 4x 10G SFP+ Cloud Core Ethernet Router",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Mikrotik/CCR2116-12G-4S+/CCR2116-12G-4S+_P2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/CCR2116-12G-4S+/CCR2116-12G-4S+_P2-250x250.jpg.webp",
             "alt": "Mikrotik CCR2116-12G-4S+ 16-Core ARM CPU 4x 10G SFP+ Cloud Core Ethernet Router",
             "width": 250,
             "height": 250
@@ -1792,13 +1792,13 @@ export const home: HomeData = {
           "name": "Mikrotik C52IG-5HAXD2HAXD-TC HAP AX² Wi-Fi 6 Router",
           "href": "/index.php?route=product/product&product_id=308",
           "image": {
-            "src": "/image/cache/catalog/Mikrotik/C52iG-5HaxD2HaxD-TC/C52iG-5HaxD2HaxD-TC-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/C52iG-5HaxD2HaxD-TC/C52iG-5HaxD2HaxD-TC-250x250.jpg.webp",
             "alt": "Mikrotik C52IG-5HAXD2HAXD-TC HAP AX² Wi-Fi 6 Router",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Mikrotik/C52iG-5HaxD2HaxD-TC/C52iG-5HaxD2HaxD-TC-2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/C52iG-5HaxD2HaxD-TC/C52iG-5HaxD2HaxD-TC-2-250x250.jpg.webp",
             "alt": "Mikrotik C52IG-5HAXD2HAXD-TC HAP AX² Wi-Fi 6 Router",
             "width": 250,
             "height": 250
@@ -1855,13 +1855,13 @@ export const home: HomeData = {
           "name": "Mikrotik hAP ac2 RBD52G-5HacD2HnD-TC Ethernet Router",
           "href": "/mikrotik-hap-ac2-rbd52g-5hacd2hnd-tc-ethernet-router",
           "image": {
-            "src": "/image/cache/catalog/Mikrotik/MikroTik%20hAP%20ac%C2%B2%20/hAP-ac21000x1000-4-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/MikroTik%20hAP%20ac%C2%B2/hAP-ac21000x1000-4-250x250.jpg.webp",
             "alt": "Mikrotik hAP ac2 RBD52G-5HacD2HnD-TC Ethernet Router",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Mikrotik/MikroTik%20hAP%20ac%C2%B2%20/hAP-ac21000x1000-2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/MikroTik%20hAP%20ac%C2%B2/hAP-ac21000x1000-2-250x250.jpg.webp",
             "alt": "Mikrotik hAP ac2 RBD52G-5HacD2HnD-TC Ethernet Router",
             "width": 250,
             "height": 250
@@ -1913,13 +1913,13 @@ export const home: HomeData = {
           "name": "Mikrotik hEX E50UG Ethernet Router",
           "href": "/mikrotik-hex-e50ug-ethernet-router",
           "image": {
-            "src": "/image/cache/catalog/Mikrotik/hEX%20E50UG/hEX-E50UG-1000x1000-2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/hEX%20E50UG/hEX-E50UG-1000x1000-2-250x250.jpg.webp",
             "alt": "Mikrotik hEX E50UG  Ethernet Router",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Mikrotik/hEX%20E50UG/hEX-E50UG-1000x1000-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/hEX%20E50UG/hEX-E50UG-1000x1000-250x250.jpg.webp",
             "alt": "Mikrotik hEX E50UG  Ethernet Router",
             "width": 250,
             "height": 250
@@ -1982,13 +1982,13 @@ export const home: HomeData = {
           "name": "Mikrotik hEX S E60iUGS (2025 Version) with 2.5G SFP Port",
           "href": "/mikrotik-hex-s-e60iugs-2025-version-with-25g-sfp-port",
           "image": {
-            "src": "/image/cache/catalog/Mikrotik/hEX%20S%20E60iUGS/hEX-S-E60iUGS-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/hEX%20S%20E60iUGS/hEX-S-E60iUGS-250x250.jpg.webp",
             "alt": "Mikrotik hEX S E60iUGS (2025 Version) with 2.5G SFP Port",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Mikrotik/hEX%20S%20E60iUGS/hEX-S-E60iUGS-2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/mikrotik/hEX%20S%20E60iUGS/hEX-S-E60iUGS-2-250x250.jpg.webp",
             "alt": "Mikrotik hEX S E60iUGS (2025 Version) with 2.5G SFP Port",
             "width": 250,
             "height": 250
@@ -2343,7 +2343,7 @@ export const home: HomeData = {
           "name": "HUAWEI 02310MNW 10GBASE-USR SFP+ 850nm 0.1km Multimode Transceiver Module",
           "href": "/huawei-02310mnw-10gbase-usr-sfp-850nm-01km-multimode-transceiver-module",
           "image": {
-            "src": "/image/cache/catalog/HUAWEI/HUAWEI-02310MNW-10GBASE-USR-SFP+-850nm-0.1km-Multimode-Transceiver-Module-250x250.jpg.webp",
+            "src": "/image/cache/catalog/Huawei/HUAWEI-02310MNW-10GBASE-USR-SFP+-850nm-0.1km-Multimode-Transceiver-Module-250x250.jpg.webp",
             "alt": "HUAWEI 02310MNW 10GBASE-USR SFP+ 850nm 0.1km Multimode Transceiver Module",
             "width": 250,
             "height": 250
@@ -2472,13 +2472,13 @@ export const home: HomeData = {
           "name": "Huawei SP310 Intel PCIe x8 Dual-Port 10G SFP+ Ethernet Network Card",
           "href": "/huawei-sp310-intel-pcie-x8-dual-port-10g-sfp-ethernet-network-card",
           "image": {
-            "src": "/image/cache/catalog/HUAWEI/Huawei-SP310_2-Port-Network-Adapter_500x500_P3-Photoroom-250x250.jpg.webp",
+            "src": "/image/cache/catalog/Huawei/Huawei-SP310_2-Port-Network-Adapter_500x500_P3-Photoroom-250x250.jpg.webp",
             "alt": "Huawei SP310 Intel PCIe x8 Dual-Port 10G SFP+ Ethernet Network Card",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/HUAWEI/Huawei-SP310_2-Port-Network-Adapter_500x500_P1-Photoroom-250x250.jpg.webp",
+            "src": "/image/cache/catalog/Huawei/Huawei-SP310_2-Port-Network-Adapter_500x500_P1-Photoroom-250x250.jpg.webp",
             "alt": "Huawei SP310 Intel PCIe x8 Dual-Port 10G SFP+ Ethernet Network Card",
             "width": 250,
             "height": 250
@@ -2703,13 +2703,13 @@ export const home: HomeData = {
           "name": "Intel OT-ST727 PCIe X4 I350-T2 Dual RJ45 10/100/1000Mbps Gigabit Ethernet Card",
           "href": "/ intel-ot-st727-pcie-x4-i350-t2-dual-rj45-10-100-1000mbps-gigabit-ethernet-card",
           "image": {
-            "src": "/image/cache/catalog/Intel/OT-ST727/OT-ST727-P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/intel/OT-ST727/OT-ST727-P1-250x250.jpg.webp",
             "alt": "Intel OT-ST727 PCIe X4 I350-T2 Dual RJ45 10/100/1000Mbps Gigabit Ethernet Card",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Intel/OT-ST727/OT-ST727-P2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/intel/OT-ST727/OT-ST727-P2-250x250.jpg.webp",
             "alt": "Intel OT-ST727 PCIe X4 I350-T2 Dual RJ45 10/100/1000Mbps Gigabit Ethernet Card",
             "width": 250,
             "height": 250
@@ -2745,13 +2745,13 @@ export const home: HomeData = {
           "name": "Intel OT-ST7315 PCIe x4 X520-DA1 Single-Port 10G SFP+ Fiber Optic Network Network Card",
           "href": "/intel-ot-st7315-pcie-x4-x520-da1-single-port-10g-sfp-fiber-optic-network-network-card",
           "image": {
-            "src": "/image/cache/catalog/Intel/OT-ST7315/OT-ST7315_X520-DA1-P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/intel/OT-ST7315/OT-ST7315_X520-DA1-P1-250x250.jpg.webp",
             "alt": "Intel OT-ST7315 PCIe x4 X520-DA1 Single-Port 10G SFP+ Fiber Optic Network Network Card",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Intel/OT-ST7315/OT-ST7315_X520-DA1-P2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/intel/OT-ST7315/OT-ST7315_X520-DA1-P2-250x250.jpg.webp",
             "alt": "Intel OT-ST7315 PCIe x4 X520-DA1 Single-Port 10G SFP+ Fiber Optic Network Network Card",
             "width": 250,
             "height": 250
@@ -2895,7 +2895,7 @@ export const home: HomeData = {
           "name": "Cambium XV2-21X Wi-Fi 6 Indoor Enterprise Wireless Access Point",
           "href": "/cambium-xv2-21x-wi-fi-6-indoor-enterprise-wireless-access-point",
           "image": {
-            "src": "/image/cache/catalog/Cambium-Network/XV2-21X%20Wi-Fi%206%20/XV2-21X-Wi-Fi-6--250x250.jpg.webp",
+            "src": "/image/cache/catalog/Cambium-Network/XV2-21X%20Wi-Fi%206/XV2-21X-Wi-Fi-6--250x250.jpg.webp",
             "alt": "Cambium XV2-21X Wi-Fi 6 Indoor Enterprise Wireless Access Point",
             "width": 250,
             "height": 250
@@ -2927,13 +2927,13 @@ export const home: HomeData = {
           "name": "Grandstream GWN7603 Dual-Band Wave-2 WiFi Access Point",
           "href": "/grandstream-gwn7603-dual-band-wave-2-wifi-access-point",
           "image": {
-            "src": "/image/cache/catalog/GWN7603%20/Grandstream%20GWN7603%20Dual-Band%20Wave-2%20WiFi%20Access%20Point%20P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7603/Grandstream%20GWN7603%20Dual-Band%20Wave-2%20WiFi%20Access%20Point%20P1-250x250.jpg.webp",
             "alt": "Grandstream GWN7603 Dual-Band Wave-2 WiFi Access Point",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/GWN7603%20/Grandstream%20GWN7603%20Dual-Band%20Wave-2%20WiFi%20Access%20Point%20P2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7603/Grandstream%20GWN7603%20Dual-Band%20Wave-2%20WiFi%20Access%20Point%20P2-250x250.jpg.webp",
             "alt": "Grandstream GWN7603 Dual-Band Wave-2 WiFi Access Point",
             "width": 250,
             "height": 250
@@ -2990,13 +2990,13 @@ export const home: HomeData = {
           "name": "Grandstream GWN7605LR Dual-Band PoE Outdoor Access Point",
           "href": "/grandstream-gwn7605lr-dual-band-poe-outdoor-access-point",
           "image": {
-            "src": "/image/cache/catalog/GWN7605LR%20/Grandstream%20GWN7605LR%20Dual-Band%20PoE%20Outdoor%20Access%20Point%20P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7605LR/Grandstream%20GWN7605LR%20Dual-Band%20PoE%20Outdoor%20Access%20Point%20P1-250x250.jpg.webp",
             "alt": "Grandstream GWN7605LR Dual-Band PoE Outdoor Access Point",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/GWN7605LR%20/Grandstream%20GWN7605LR%20Dual-Band%20PoE%20Outdoor%20Access%20Point%20P2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7605LR/Grandstream%20GWN7605LR%20Dual-Band%20PoE%20Outdoor%20Access%20Point%20P2-250x250.jpg.webp",
             "alt": "Grandstream GWN7605LR Dual-Band PoE Outdoor Access Point",
             "width": 250,
             "height": 250
@@ -3011,13 +3011,13 @@ export const home: HomeData = {
           "name": "Grandstream GWN7624 Dual Band PoE WiFi Access Point",
           "href": "/grandstream-gwn7624-dual-band-poe-wifi-access-point",
           "image": {
-            "src": "/image/cache/catalog/GWN7624%20/Grandstream%20GWN7624%20Dual%20Band%20PoE%20WiFi%20Access%20Point%20P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7624/Grandstream%20GWN7624%20Dual%20Band%20PoE%20WiFi%20Access%20Point%20P1-250x250.jpg.webp",
             "alt": "Grandstream GWN7624 Dual Band PoE WiFi Access Point",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/GWN7624%20/Grandstream%20GWN7624%20Dual%20Band%20PoE%20WiFi%20Access%20Point%20P2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7624/Grandstream%20GWN7624%20Dual%20Band%20PoE%20WiFi%20Access%20Point%20P2-250x250.jpg.webp",
             "alt": "Grandstream GWN7624 Dual Band PoE WiFi Access Point",
             "width": 250,
             "height": 250
@@ -3032,13 +3032,13 @@ export const home: HomeData = {
           "name": "Grandstream GWN7630LR Dual Band Wi-Fi Outdoor Access Point",
           "href": "/grandstream-gwn7630lr-dual-band-wi-fi-outdoor-access-point",
           "image": {
-            "src": "/image/cache/catalog/GWN7630LR%20/Grandstream%20GWN7630LR%20Dual%20Band%20Wi-Fi%20Outdoor%20Access%20Point%20P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7630LR/Grandstream%20GWN7630LR%20Dual%20Band%20Wi-Fi%20Outdoor%20Access%20Point%20P1-250x250.jpg.webp",
             "alt": "Grandstream GWN7630LR Dual Band Wi-Fi Outdoor Access Point",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/GWN7630LR%20/Grandstream%20GWN7630LR%20Dual%20Band%20Wi-Fi%20Outdoor%20Access%20Point%20P2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7630LR/Grandstream%20GWN7630LR%20Dual%20Band%20Wi-Fi%20Outdoor%20Access%20Point%20P2-250x250.jpg.webp",
             "alt": "Grandstream GWN7630LR Dual Band Wi-Fi Outdoor Access Point",
             "width": 250,
             "height": 250
@@ -3053,13 +3053,13 @@ export const home: HomeData = {
           "name": "Grandstream GWN7660 Dual Band MU-MIMO WiFi 6 Indoor Access Point",
           "href": "/grandstream-gwn7660-dual-band-mu-mimo-wifi-6-indoor-access-point",
           "image": {
-            "src": "/image/cache/catalog/GWN7660%20/Grandstream%20GWN7660%20Dual%20Band%20MU-MIMO%20WiFi%206%20Indoor%20Access%20Point%20P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7660/Grandstream%20GWN7660%20Dual%20Band%20MU-MIMO%20WiFi%206%20Indoor%20Access%20Point%20P1-250x250.jpg.webp",
             "alt": "Grandstream GWN7660 Dual Band MU-MIMO WiFi 6 Indoor Access Point",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/GWN7660%20/Grandstream%20GWN7660%20Dual%20Band%20MU-MIMO%20WiFi%206%20Indoor%20Access%20Point%20P2-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7660/Grandstream%20GWN7660%20Dual%20Band%20MU-MIMO%20WiFi%206%20Indoor%20Access%20Point%20P2-250x250.jpg.webp",
             "alt": "Grandstream GWN7660 Dual Band MU-MIMO WiFi 6 Indoor Access Point",
             "width": 250,
             "height": 250
@@ -3074,13 +3074,13 @@ export const home: HomeData = {
           "name": "Grandstream GWN7660ELR Wi-Fi 6 Long-Range Outdoor Access Point",
           "href": "/grandstream-gwn7660elr-wi-fi-6-long-range-outdoor-access-point",
           "image": {
-            "src": "/image/cache/catalog/GWN7660ELR%20/Grandstream%20GWN7660ELR%20Wi-Fi%206%20Long-Range%20Outdoor%20Access%20Point%20P1-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7660ELR/Grandstream%20GWN7660ELR%20Wi-Fi%206%20Long-Range%20Outdoor%20Access%20Point%20P1-250x250.jpg.webp",
             "alt": "Grandstream GWN7660ELR Wi-Fi 6 Long-Range Outdoor Access Point",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/GWN7660ELR%20/Grandstream%20GWN7660ELR%20Wi-Fi%206%20Long-Range%20Outdoor%20Access%20Point%20P3-250x250.jpg.webp",
+            "src": "/image/cache/catalog/GWN7660ELR/Grandstream%20GWN7660ELR%20Wi-Fi%206%20Long-Range%20Outdoor%20Access%20Point%20P3-250x250.jpg.webp",
             "alt": "Grandstream GWN7660ELR Wi-Fi 6 Long-Range Outdoor Access Point",
             "width": 250,
             "height": 250
