@@ -7,14 +7,14 @@ type Info = { id: string; name: string; href: string; image: string; price: stri
 // One look for every card button: same height, same corners, same gap, centred.
 export const cardBtn =
   "relative flex h-[32px] cursor-pointer items-center justify-center gap-[5px] rounded-[3px] px-[14px] text-center text-[13px] leading-[13px] font-normal whitespace-nowrap capitalize max-[471px]:h-[28px] max-[471px]:px-[10px] max-[471px]:text-[11px] max-[471px]:leading-[11px]";
-export const cardBtnFill = `${cardBtn} bg-[#e4212a] text-white hover:bg-[#c71b23]`;
-export const cardBtnLine = `${cardBtn} border-2 border-solid border-[#db2427] bg-white text-[#db2427] hover:bg-[#db2427] hover:text-white`;
+export const cardBtnFill = `${cardBtn} bg-[#01aef1] text-white hover:bg-[#0189bc]`;
+export const cardBtnLine = `${cardBtn} border-2 border-solid border-[#01aef1] bg-white text-[#01aef1] hover:bg-[#01aef1] hover:text-white`;
 const ask = "w-[150px] max-w-full max-[471px]:w-[120px]";
 
 // "Buy Now" and "Add to Cart" of a card (or two "Request Price" buttons when the price is on request).
 export default function HomeCardButtons({ p }: { p: Info }) {
   const shop = useShop();
-  const req = p.requestPrice && !p.price;
+  const req = !p.price; // a product without a price cannot be bought, it is a price request
   const item = { id: p.id, name: p.name, href: p.href, image: p.image, model: "", price: toNumber(p.price) };
   const askPrice = () => shop.askPrice({ id: p.id, name: p.name });
   return (

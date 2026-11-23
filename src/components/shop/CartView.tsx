@@ -10,12 +10,12 @@ import { useShop } from "./ShopProvider";
 type Alert = { kind: "danger" | "success"; text: string };
 
 const glyph = (code: string) => ({ "--i": `"${code}"` }) as CSSProperties;
-const th = "whitespace-nowrap bg-white px-[14px] py-[8px] align-middle text-[14px] leading-[20px] font-bold text-[#2c3a96] capitalize";
-const td = "bg-white px-[14px] py-[8px] align-middle text-[14px] leading-[20px] max-[471px]:text-[13px] max-[471px]:leading-[18.5714px] text-black border-b border-[#eee]";
-const btnDark = "relative flex cursor-pointer items-center justify-center rounded-[3px] bg-[#1a202c] px-[18px] py-[13px] text-center text-[13px] leading-[13px] font-normal whitespace-nowrap text-white uppercase";
-const field = "block h-[38px] w-full rounded-[3px] border border-[#e2e2e2] bg-white px-[12px] py-[6px] text-[14px] leading-[18.2px] text-[#555] outline-none";
+const th = "whitespace-nowrap bg-white px-[14px] py-[8px] align-middle text-[14px] leading-[20px] font-bold text-[#01aef1] capitalize";
+const td = "bg-white px-[14px] py-[8px] align-middle text-[14px] leading-[20px] max-[471px]:text-[13px] max-[471px]:leading-[18.5714px] text-black border-b border-[#e3f5fd]";
+const btnDark = "relative flex cursor-pointer items-center justify-center rounded-[3px] bg-[#000000] px-[18px] py-[13px] text-center text-[13px] leading-[13px] font-normal whitespace-nowrap text-white uppercase";
+const field = "block h-[38px] w-full rounded-[3px] border border-[#0000001f] bg-white px-[12px] py-[6px] text-[14px] leading-[18.2px] text-[#000000b3] outline-none";
 const label = "flex w-full pt-[7px] pb-[5px] text-[14px] leading-[26.6px] font-normal";
-const req = "after:mt-[3px] after:ml-[5px] after:block after:h-[10px] after:leading-[10px] after:text-[#e4212a] after:content-['*']";
+const req = "after:mt-[3px] after:ml-[5px] after:block after:h-[10px] after:leading-[10px] after:text-[#01aef1] after:content-['*']";
 
 export default function CartView() {
   const { cart, removeFromCart, setQty } = useShop();
@@ -62,12 +62,12 @@ export default function CartView() {
     const isOpen = open === key;
     return (
       <div className={`relative ${isOpen ? "z-[2]" : "z-[1]"}`}>
-        <div className={`relative z-[2] ${first ? "" : "border-t border-[#e2e2e2]"}`}>
+        <div className={`relative z-[2] ${first ? "" : "border-t border-[#0000001f]"}`}>
           <h4 className="relative text-[15px] leading-[16.5px] font-medium uppercase">
             <a
               onClick={() => toggle(key)}
               style={glyph(isOpen ? "" : "")}
-              className={`flex cursor-pointer items-center justify-between before:order-2 before:mr-[3px] before:block before:h-[15px] before:w-[11.8px] before:font-[icomoon] before:text-[15px] before:leading-[15px] before:content-(--i) ${isOpen ? "text-[#1a202c]" : "text-[#696973]"}`}
+              className={`flex cursor-pointer items-center justify-between before:order-2 before:mr-[3px] before:block before:h-[15px] before:w-[11.8px] before:font-[icomoon] before:text-[15px] before:leading-[15px] before:content-(--i) ${isOpen ? "text-[#000000]" : "text-[#00000099]"}`}
             >
               {title}
             </a>
@@ -79,14 +79,14 @@ export default function CartView() {
   };
 
   return (
-    <div className="text-[15px] leading-[28.5px] font-medium text-[#333]">
+    <div className="text-[15px] leading-[28.5px] font-medium text-[#000000]">
       <h1 className="sr-only">Shopping Cart{cart.length > 0 && " (0.00kg)"}</h1>
       <CartNotice />
 
       <div className="mx-auto w-full max-w-[1280px]">
         <div className="py-[20px] max-[1301px]:px-[20px] max-[1301px]:pt-0 max-[1301px]:pb-[20px] max-[471px]:p-[5px]">
           {alert && (
-            <div className={`relative mt-[20px] mb-[20px] rounded-[3px] border p-[15px] text-[14px] ${alert.kind === "danger" ? "border-[#ebccd1] bg-[#f2dede] text-[#a94442]" : "border-[#d6e9c6] bg-[#dff0d8] text-[#3c763d]"}`}>
+            <div className={`relative mt-[20px] mb-[20px] rounded-[3px] border p-[15px] text-[14px] ${alert.kind === "danger" ? "border-[#d1effc] bg-[#e3f5fd] text-[#0189bc]" : "border-[#d1effc] bg-[#e3f5fd] text-[#0189bc]"}`}>
               <i className={`fa fa-${alert.kind === "danger" ? "exclamation" : "check"}-circle`} /> {alert.text}
               <button type="button" className="absolute top-[10px] right-[15px] cursor-pointer text-[21px] leading-none" onClick={() => setAlert(null)}>
                 ×
@@ -97,7 +97,7 @@ export default function CartView() {
             <div className="pt-[20px]">
               <p>Your shopping cart is empty!</p>
               <div className="mt-[20px] flex justify-end">
-                <Link href="/" className="relative inline-flex items-center justify-center rounded-[3px] bg-[#1a202c] px-[18px] py-[13px] text-[13px] leading-[13px] text-white uppercase">
+                <Link href="/" className="relative inline-flex items-center justify-center rounded-[3px] bg-[#000000] px-[18px] py-[13px] text-[13px] leading-[13px] text-white uppercase">
                   Continue
                 </Link>
               </div>
@@ -121,26 +121,26 @@ export default function CartView() {
                       {cart.map((i) => (
                         <tr key={i.id}>
                           <td className={`${td} text-center`}>
-                            <Link href={i.href} className="inline-block text-[#337ab7]">
+                            <Link href={i.href} className="inline-block text-[#01aef1]">
                               <img src={i.image} width={60} height={60} alt={i.name} title={i.name} className="inline" />
                             </Link>
                           </td>
                           <td className={`${td} text-left`}>
-                            <Link href={i.href} className="inline-block text-[#337ab7]">
+                            <Link href={i.href} className="inline-block text-[#01aef1]">
                               {i.name}
                             </Link>
                           </td>
                           <td className={`${td} text-center`}>{i.model}</td>
                           <td className={`${td} text-center`}>
                             <div className="relative flex items-center justify-center">
-                              <div className="relative flex h-[30px] w-[100px] items-center overflow-hidden border border-[#e2e2e2] text-[15px] leading-[21.4px]">
+                              <div className="relative flex h-[30px] w-[100px] items-center overflow-hidden border border-[#0000001f] text-[15px] leading-[21.4px]">
                                 <input
                                   type="text"
                                   value={qtyOf(i.id, i.qty)}
                                   onChange={(e) => typed(i.id, e.target.value)}
                                     onBlur={() => settle(i.id)}
                                   size={1}
-                                  className="relative z-[2] h-[28px] min-w-0 flex-1 bg-[#f2f3f7] pr-[20px] pl-[2px] text-center text-[13px] leading-[16.9px] text-[#555] outline-none"
+                                  className="relative z-[2] h-[28px] min-w-0 flex-1 bg-[#f0fafe] pr-[20px] pl-[2px] text-center text-[13px] leading-[16.9px] text-[#000000b3] outline-none"
                                 />
                                 <span className="absolute top-0 left-[79px] z-[10] flex h-[28px] w-[19px] flex-col border-l border-transparent">
                                   {[
@@ -151,7 +151,7 @@ export default function CartView() {
                                       key={String(d)}
                                       onClick={() => step(i.id, i.qty, Number(d))}
                                       style={glyph(String(c))}
-                                      className="flex h-[14px] w-[18px] cursor-pointer items-center justify-center bg-[#e6e6e6] text-[#696973] before:block before:h-[15px] before:w-[12px] before:font-[icomoon] before:text-[15px] before:leading-[15px] before:content-(--i)"
+                                      className="flex h-[14px] w-[18px] cursor-pointer items-center justify-center bg-[#e3f5fd] text-[#00000099] before:block before:h-[15px] before:w-[12px] before:font-[icomoon] before:text-[15px] before:leading-[15px] before:content-(--i)"
                                     />
                                   ))}
                                 </span>
@@ -162,14 +162,14 @@ export default function CartView() {
                                   title="Update"
                                   onClick={() => update(i.id)}
                                   style={glyph("")}
-                                  className="relative ml-[5px] inline-flex size-[36px] cursor-pointer items-center justify-center rounded-[3px] bg-[#1a202c] text-[13px] text-white before:font-[icomoon] before:text-[13px] before:leading-[13px] before:content-(--i)"
+                                  className="relative ml-[5px] inline-flex size-[36px] cursor-pointer items-center justify-center rounded-[3px] bg-[#000000] text-[13px] text-white before:font-[icomoon] before:text-[13px] before:leading-[13px] before:content-(--i)"
                                 />
                                 <button
                                   type="button"
                                   title="Remove"
                                   onClick={() => removeFromCart(i.id)}
                                   style={glyph("")}
-                                  className="relative ml-[5px] inline-flex size-[36px] cursor-pointer items-center justify-center rounded-[3px] bg-[#e4212a] text-[13px] text-white before:font-[icomoon] before:text-[13px] before:leading-[13px] before:content-(--i)"
+                                  className="relative ml-[5px] inline-flex size-[36px] cursor-pointer items-center justify-center rounded-[3px] bg-[#01aef1] text-[13px] text-white before:font-[icomoon] before:text-[13px] before:leading-[13px] before:content-(--i)"
                                 />
                               </span>
                             </div>
@@ -183,10 +183,10 @@ export default function CartView() {
                 </div>
               </form>
 
-              <div className="ml-[20px] block w-[400px] min-w-[242px] shrink border border-[#e2e2e2] bg-[#eee] p-[20px] max-[1025px]:mt-[20px] max-[1025px]:ml-0 max-[1025px]:max-w-full max-[1025px]:shrink-0">
+              <div className="ml-[20px] block w-[400px] min-w-[242px] shrink border border-[#0000001f] bg-[#e3f5fd] p-[20px] max-[1025px]:mt-[20px] max-[1025px]:ml-0 max-[1025px]:max-w-full max-[1025px]:shrink-0">
                 <div className="flex flex-col justify-between">
                   <div className="flex-1">
-                    <h2 className="relative mb-[15px] text-[14px] leading-[16.8px] font-medium after:mt-[10px] after:block after:h-px after:w-[50px] after:bg-[#e96631] after:content-['']">What would you like to do next?</h2>
+                    <h2 className="relative mb-[15px] text-[14px] leading-[16.8px] font-medium after:mt-[10px] after:block after:h-px after:w-[50px] after:bg-[#01aef1] after:content-['']">What would you like to do next?</h2>
                     <div>
                       {panel(
                         "coupon",
@@ -220,7 +220,7 @@ export default function CartView() {
                                 Country
                               </label>
                               <div className="relative flex min-w-[200px] flex-1">
-                                <select id="input-country" className="h-[34px] w-[200px] rounded-[3px] border border-[#e2e2e2] bg-white px-[12px] py-[6px] text-[14px] text-[#555]" value={country} onChange={(e) => setCountry(e.target.value)}>
+                                <select id="input-country" className="h-[34px] w-[200px] rounded-[3px] border border-[#0000001f] bg-white px-[12px] py-[6px] text-[14px] text-[#000000b3]" value={country} onChange={(e) => setCountry(e.target.value)}>
                                   <option value=""> --- Please Select --- </option>
                                   <option value="18">Bangladesh</option>
                                 </select>
@@ -231,7 +231,7 @@ export default function CartView() {
                                 Region / State
                               </label>
                               <div className="relative flex min-w-[200px] flex-1">
-                                <select id="input-zone" className="h-[34px] w-[200px] rounded-[3px] border border-[#e2e2e2] bg-white px-[12px] py-[6px] text-[14px] text-[#555]" value={zone} onChange={(e) => setZone(e.target.value)}>
+                                <select id="input-zone" className="h-[34px] w-[200px] rounded-[3px] border border-[#0000001f] bg-white px-[12px] py-[6px] text-[14px] text-[#000000b3]" value={zone} onChange={(e) => setZone(e.target.value)}>
                                   <option value=""> --- Please Select --- </option>
                                   {DISTRICTS.map((d) => (
                                     <option key={d} value={d}>
@@ -307,12 +307,12 @@ export default function CartView() {
                 </div>
                 <div className="mt-[20px] flex flex-wrap text-[12px] leading-[22.8px]">
                   <div className="flex-1 basis-0 max-[471px]:basis-full">
-                    <Link href="/" className="relative inline-flex h-[39px] w-full items-center justify-center rounded-[3px] bg-[#db2427] px-[18px] py-[13px] text-center text-[13px] leading-[13px] font-normal whitespace-nowrap text-white uppercase">
+                    <Link href="/" className="relative inline-flex h-[39px] w-full items-center justify-center rounded-[3px] bg-[#01aef1] px-[18px] py-[13px] text-center text-[13px] leading-[13px] font-normal whitespace-nowrap text-white uppercase">
                       <span>Continue Shopping</span>
                     </Link>
                   </div>
                   <div className="flex flex-1 basis-0 items-center justify-end pl-[10px] max-[471px]:basis-full max-[471px]:pt-[10px] max-[471px]:pl-0">
-                    <Link href="/checkout" className="relative flex h-[39px] w-full items-center justify-center rounded-[3px] bg-[#50ad55] px-[18px] py-[13px] text-center text-[13px] leading-[13px] font-normal whitespace-nowrap text-white uppercase">
+                    <Link href="/checkout" className="relative flex h-[39px] w-full items-center justify-center rounded-[3px] bg-[#01aef1] px-[18px] py-[13px] text-center text-[13px] leading-[13px] font-normal whitespace-nowrap text-white uppercase">
                       <span>Checkout</span>
                     </Link>
                   </div>

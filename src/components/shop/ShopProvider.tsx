@@ -54,6 +54,11 @@ export default function ShopProvider({ children }: { children: React.ReactNode }
 
   const addToCart: Shop["addToCart"] = useCallback(
     (p, qty = 1, quickBuy = false) => {
+      // nothing is sold without a price: ask for the price instead
+      if (!(p.price > 0)) {
+        setPrice({ id: p.id, name: p.name });
+        return;
+      }
       const items = cartStore.getSnapshot();
       const found = items.find((i) => i.id === p.id);
       cartStore.set(found ? items.map((i) => (i.id === p.id ? { ...i, qty: i.qty + qty } : i)) : [...items, { ...p, qty }]);

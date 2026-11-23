@@ -41,21 +41,23 @@ export default function HeroSlider({ slides, delay, width, height }: { slides: S
             <div
               key={s.src + k}
               className={`absolute inset-0 ${k === prev ? "z-[2]" : k === i ? "z-[1]" : "pointer-events-none z-0 opacity-0"}`}
-              style={k === prev ? { animation: "otech-crop 1000ms cubic-bezier(0.16, 1, 0.3, 1) forwards" } : undefined}
+              style={k === prev ? { animation: "dcore-crop 1000ms cubic-bezier(0.16, 1, 0.3, 1) forwards" } : undefined}
             >
               <Link href={s.href || "#"} className="block h-full">
                 <img src={s.src} alt={s.alt} width={width} height={height} className="block size-full object-cover" loading={k === 0 ? "eager" : "lazy"} />
               </Link>
             </div>
           ))}
-        </div>
-        <div className="absolute bottom-0 left-1/2 -my-[22px] w-max max-w-full -translate-x-1/2">
-          <div className="flex flex-wrap justify-center">
+          <div className="absolute bottom-[12px] left-1/2 z-[3] flex max-w-[calc(100%-16px)] -translate-x-1/2 items-center justify-center gap-[7px] rounded-full bg-black/30 px-[11px] py-[7px] shadow-[0_4px_14px_rgba(0,0,0,0.25)] backdrop-blur-[6px] max-[471px]:bottom-[8px] max-[471px]:gap-[5px] max-[471px]:px-[8px] max-[471px]:py-[5px]">
             {slides.map((_, k) => (
-              <div
+              <button
                 key={k}
+                type="button"
+                aria-label={`Slide ${k + 1}`}
                 onClick={() => go(k)}
-                className={`m-[5px] h-[7px] w-[25px] cursor-pointer hover:bg-[#e96631] max-[471px]:h-[5px] ${k === i ? "bg-[#e96631]" : "bg-[#696973]"}`}
+                className={`h-[8px] cursor-pointer rounded-full transition-all duration-300 ease-out max-[471px]:h-[6px] ${
+                  k === i ? "w-[26px] bg-[#01aef1] shadow-[0_0_8px_rgba(1,174,241,0.8)] max-[471px]:w-[18px]" : "w-[8px] bg-white/65 hover:bg-white max-[471px]:w-[6px]"
+                }`}
               />
             ))}
           </div>

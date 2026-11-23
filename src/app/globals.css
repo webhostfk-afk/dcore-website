@@ -16,6 +16,7 @@
 @source "../components/category/CatCard.tsx";
 @source "../components/category/CategoryBrowser.tsx";
 @source "../components/category/PriceSlider.tsx";
+@source "../components/category/RefineCarousel.tsx";
 @source "../components/layout/DesktopHeader.tsx";
 @source "../components/layout/DesktopMenu.tsx";
 @source "../components/layout/HeaderShell.tsx";
@@ -31,6 +32,8 @@
 @source "../components/shop/ModulePopup.tsx";
 @source "../components/shop/AskPriceModal.tsx";
 @source "../components/layout/SideMenu.tsx";
+@source "../components/layout/ChatWidget.tsx";
+@source "../app/chat-admin/page.tsx";
 @source "../components/shop/Toasts.tsx";
 @source "../components/shop/CartNotice.tsx";
 @source "../components/shop/CheckoutView.tsx";
@@ -43,20 +46,26 @@
 @source "../components/home/CategoryBlocks.tsx";
 @source "../components/home/HeroSlider.tsx";
 @source "../components/home/BrandCarousel.tsx";
+@source "../components/home/NoticeTicker.tsx";
+@source "../components/offers/OffersList.tsx";
+@source "../components/offers/OfferDetail.tsx";
+@source "../components/pcbuilder/PcBuilder.tsx";
+@source "../components/pcbuilder/PcBuildPrint.tsx";
+@source "../components/layout/MobileBottomBar.tsx";
 
 /* ---- design tokens of the shop (values read from the original theme) ---- */
 @theme {
   --font-sans: "trebuc-webfont", Arial, sans-serif;
 
-  --color-ink: #1a202c; /* headings, dark buttons, top bar */
-  --color-body: #4a5568;
-  --color-brand: #db2427; /* the red of prices, buttons and links on hover */
-  --color-brand-dark: #b81d20;
-  --color-link: #3c5fa5;
-  --color-page: #f2f3f7; /* page background */
-  --color-line: #e2e2e2;
-  --color-footer: #07131e;
-  --color-footer-bar: #0f1e2d;
+  --color-ink: #000000; /* headings, dark buttons, top bar */
+  --color-body: #000000cc;
+  --color-brand: #01aef1; /* the red of prices, buttons and links on hover */
+  --color-brand-dark: #0189bc;
+  --color-link: #01aef1;
+  --color-page: #f0fafe; /* page background */
+  --color-line: #0000001f;
+  --color-footer: #000000;
+  --color-footer-bar: #000000;
 }
 
 @font-face {
@@ -86,8 +95,8 @@
     font-size: 10px;
   }
   body {
-    background: #f2f3f7;
-    color: #333;
+    background: #f0fafe;
+    color: #000000;
     font-family: "trebuc-webfont", Arial, sans-serif;
     font-weight: 500;
     font-size: 15px;
@@ -125,36 +134,61 @@
   .legacy-html ul { list-style: disc; padding-left: 40px; margin: 0 0 10px; }
   .legacy-html ol { list-style: decimal; padding-left: 40px; margin: 0 0 10px; }
   .legacy-html li { display: list-item; }
-  .legacy-html a { color: #337ab7; text-decoration: none; }
-  .legacy-html a:hover { color: #23527c; text-decoration: underline; }
+  .legacy-html a { color: #01aef1; text-decoration: none; }
+  .legacy-html a:hover { color: #0189bc; text-decoration: underline; }
   .legacy-html b, .legacy-html strong { font-weight: 700; }
   .legacy-html img { display: inline-block; max-width: 100%; height: auto; }
   .legacy-html table { border-collapse: collapse; max-width: 100%; margin-bottom: 20px; }
-  .legacy-html td, .legacy-html th { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+  .legacy-html td, .legacy-html th { border: 1px solid #d1effc; padding: 8px; vertical-align: top; }
   .legacy-html th { text-align: left; }
-  .legacy-html hr { margin: 20px 0; border-top: 1px solid #eee; }
+  .legacy-html hr { margin: 20px 0; border-top: 1px solid #e3f5fd; }
 }
 
-/* Notice bar under the brands: the original <marquee>, scrolling right to left, stopping while hovered */
-.otech-marquee-track {
-  display: inline-block;
-  padding-left: 100%;
-  animation: otech-marquee 45s linear infinite;
+/* Notice line under the brands (components/home/NoticeTicker.tsx): two copies of the messages slide left, the loop has no gap; it stops on hover */
+.dcore-ticker-track {
+  animation: dcore-ticker 38s linear infinite;
 }
-.otech-marquee:hover .otech-marquee-track {
+.dcore-ticker:hover .dcore-ticker-track {
   animation-play-state: paused;
 }
-@keyframes otech-marquee {
+@media (prefers-reduced-motion: reduce) {
+  .dcore-ticker-track {
+    animation: none;
+  }
+}
+@keyframes dcore-ticker {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
+  }
+}
+
+/* Brand logos (components/home/BrandCarousel.tsx): two copies of the list, the row moves by one list, so the loop has no jump; paused on hover */
+.dcore-brands-track {
+  animation: dcore-brands 70s linear infinite;
+  will-change: transform;
+}
+.dcore-brands:hover .dcore-brands-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dcore-brands-track {
+    animation: none;
+  }
+}
+@keyframes dcore-brands {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
 /* animated background of the "Offer" button in the header */
-@keyframes otech-gradient {
+@keyframes dcore-gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -166,10 +200,10 @@
   }
 }
 
-.otech-fade {
-  animation: otech-fade-in 0.2s ease-out;
+.dcore-fade {
+  animation: dcore-fade-in 0.2s ease-out;
 }
-@keyframes otech-fade-in {
+@keyframes dcore-fade-in {
   from {
     opacity: 0;
   }
@@ -179,7 +213,7 @@
 }
 
 /* hero banner: cropped from the right edge to the left, uncovering the next banner under it (nothing moves) */
-@keyframes otech-crop {
+@keyframes dcore-crop {
   from {
     clip-path: inset(0 0 0 0);
   }

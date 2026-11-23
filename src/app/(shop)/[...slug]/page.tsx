@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const c = getCategory(slug);
   if (!c) {
     const pr = getProduct(slug);
-    if (!pr) return { title: "OTECH" };
+    if (!pr) return { title: "D CORE Solutions" };
     const pm = pr.meta;
     return { title: pm.title, description: pm.description, keywords: pm.keywords, openGraph: { title: pm.title, description: pm.description, images: pm.ogImage ? [pm.ogImage] : [] } };
   }

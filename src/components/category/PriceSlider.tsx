@@ -32,10 +32,10 @@ export default function PriceSlider({ min, max, from, to, onChange }: { min: num
   const pos = (p: number) => `calc((100% - ${H}px) * ${p})`;
   return (
     <div ref={box} className="relative h-[10px] w-full">
-      <span className="absolute top-[37.5px] left-0 h-px w-full rounded-[10px] bg-[#e96631]" />
-      <span className="absolute top-[37.5px] h-px rounded-[10px] bg-[#db2427]" style={{ left: `calc(${H / 2}px + ${pos(pf)})`, width: `calc((100% - ${H}px) * ${pt - pf})` }} />
-      <span className="absolute top-[30px] z-[1] size-[15px] cursor-pointer touch-none rounded-[50%] bg-[#db2427]" style={{ left: pos(pf) }} onPointerDown={drag("from")} />
-      <span className="absolute top-[30px] z-[1] size-[15px] cursor-pointer touch-none rounded-[50%] bg-[#db2427]" style={{ left: pos(pt) }} onPointerDown={drag("to")} />
+      <span className="absolute top-[37.5px] left-0 h-px w-full rounded-[10px] bg-[#01aef1]" />
+      <span className="absolute top-[37.5px] h-px rounded-[10px] bg-[#01aef1]" style={{ left: `calc(${H / 2}px + ${pos(pf)})`, width: `calc((100% - ${H}px) * ${pt - pf})` }} />
+      <span className="absolute top-[30px] z-[1] size-[15px] cursor-pointer touch-none rounded-[50%] bg-[#01aef1]" style={{ left: pos(pf) }} onPointerDown={drag("from")} />
+      <span className="absolute top-[30px] z-[1] size-[15px] cursor-pointer touch-none rounded-[50%] bg-[#01aef1]" style={{ left: pos(pt) }} onPointerDown={drag("to")} />
     </div>
   );
 }

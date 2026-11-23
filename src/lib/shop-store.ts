@@ -6,8 +6,8 @@ export type CompareItem = { id: string; name: string; href: string; image: strin
 
 const EMPTY_CART: CartItem[] = [];
 const EMPTY_COMPARE: CompareItem[] = [];
-export const cartStore = createPersistentStore<CartItem[]>("otech:cart", EMPTY_CART);
-export const compareStore = createPersistentStore<CompareItem[]>("otech:compare", EMPTY_COMPARE);
+export const cartStore = createPersistentStore<CartItem[]>("dcore:cart", EMPTY_CART);
+export const compareStore = createPersistentStore<CompareItem[]>("dcore:compare", EMPTY_COMPARE);
 
 export const money = (n: number) => `${Math.round(n).toLocaleString("en-US")}৳`;
 export const toNumber = (s: string | null | undefined) => (s ? Number(s.replace(/[^\d.]/g, "")) || 0 : 0);

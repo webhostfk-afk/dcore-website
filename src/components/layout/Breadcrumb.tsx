@@ -11,8 +11,8 @@ export default function Breadcrumb({
   items: { label: string; href: string }[];
 }) {
   return (
-    <div className="relative w-full bg-[#f2f3f7] shadow-[2px_2px_5px_1px_rgba(26,32,44,0.1)]">
-      <ul className="relative mx-auto block w-full max-w-[1280px] py-[10px] pr-[10px] pl-0 text-left text-[15px] leading-[28.5px] font-medium whitespace-nowrap text-[#333] max-[1301px]:pl-[15px]">
+    <div className="relative w-full bg-[#f0fafe]">
+      <ul className="relative mx-auto block w-full max-w-[1280px] py-[10px] pr-[10px] pl-0 text-left text-[15px] leading-[28.5px] font-medium whitespace-nowrap text-[#000000] max-[1301px]:pl-[15px]">
         {items.map((b, i) => (
           <Fragment key={b.href + i}>
             {i > 0 && " "}
@@ -22,7 +22,7 @@ export default function Breadcrumb({
                   href={b.href}
                   aria-label="Home"
                   style={home}
-                  className="text-[13px] leading-[24.7px] text-[#696973] hover:text-[#e4212a]"
+                  className="text-[13px] leading-[24.7px] text-[#00000099] hover:text-[#01aef1]"
                 >
                   <span className="relative top-[1px] inline-block h-[15px] w-[13px] leading-[13px] before:inline before:font-[icomoon] before:text-[13px] before:content-(--i)" />
                 </Link>
@@ -30,11 +30,11 @@ export default function Breadcrumb({
                 <>
                   <span
                     style={arrow}
-                    className="relative top-[1px] block h-[28.5px] w-[25px] max-[471px]:w-[24.5px] text-center text-[15px] leading-[28.5px] text-[#696973] before:content-(--i)"
+                    className="relative top-[1px] block h-[28.5px] w-[25px] max-[471px]:w-[24.5px] text-center text-[15px] leading-[28.5px] text-[#00000099] before:content-(--i)"
                   />
                   <Link
                     href={b.href}
-                    className="text-[13px] leading-[24.7px] text-[#696973] hover:text-[#e4212a] max-[471px]:text-[12px]"
+                    className="text-[13px] leading-[24.7px] text-[#00000099] hover:text-[#01aef1] max-[471px]:text-[12px]"
                   >
                     {b.label}
                   </Link>

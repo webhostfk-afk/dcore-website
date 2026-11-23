@@ -1,63 +1,29 @@
-"use client";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 
 type Brand = { name: string; href: string; image: { src: string; width?: number; height?: number } };
 
-// Brand logos: 8 per view (4 on phones), one step every 3 s, paused while hovered, back to the start at the end.
+// Brand logos: one endless row that slides from right to left without a stop between the end and the start (the list is shown twice
+// and the row moves by exactly one list). It pauses while the mouse is over it.
 export default function BrandCarousel({ brands }: { brands: Brand[] }) {
-  const box = useRef<HTMLDivElement>(null);
-  const track = useRef<HTMLDivElement>(null);
-  const [index, setIndex] = useState(0);
-  const [max, setMax] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  useEffect(() => {
-    const measure = () => {
-      const t = track.current;
-      const b = box.current;
-      const first = t?.children[0] as HTMLElement | undefined;
-      if (!t || !b || !first) return;
-      const step = first.offsetWidth + 10;
-      const visible = Math.max(1, Math.round((b.clientWidth + 10) / step));
-      const m = Math.max(0, brands.length - visible);
-      setMax(m);
-      setIndex((i) => Math.min(i, m));
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, [brands.length]);
-
-  useEffect(() => {
-    if (paused || max === 0) return;
-    const t = setInterval(() => setIndex((i) => (i >= max ? 0 : i + 1)), 3000);
-    return () => clearInterval(t);
-  }, [paused, max]);
-
-  useEffect(() => {
-    const t = track.current;
-    const first = t?.children[0] as HTMLElement | undefined;
-    if (t && first) t.style.transform = `translate3d(${-index * (first.offsetWidth + 10)}px,0,0)`;
-  }, [index, max]);
-
+  const list = (key: string, hidden?: boolean) => (
+    <ul key={key} aria-hidden={hidden} className="flex flex-none">
+      {brands.map((b) => (
+        <li key={b.href} className="mr-[10px] block w-[150px] flex-none max-[471px]:w-[96px]">
+          <Link href={b.href} tabIndex={hidden ? -1 : undefined} className="flex h-[82px] items-center justify-center rounded-[5px] bg-white p-[11px] transition-shadow duration-200 hover:shadow-[0_6px_16px_-8px_rgba(1,174,241,0.6)] max-[471px]:h-[64px] max-[471px]:p-[8px]">
+            <img src={b.image.src} width={b.image.width} height={b.image.height} alt={b.name} title={b.name} loading="lazy" className="block max-h-full max-w-full object-contain" />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
   return (
-    <div className="relative block pb-[15px]" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      <div ref={box} className="relative z-[1] block overflow-hidden">
-        <div ref={track} className="relative flex transition-transform duration-[400ms]">
-          {brands.map((b) => (
-            <div key={b.href} className="relative mr-[10px] block w-[calc((100%-70px)/8-0.01px)] flex-none max-[471px]:w-[calc((100%-30px)/4-0.01px)]">
-              <div className="relative flex flex-wrap rounded-[5px] bg-white">
-                <div className="block w-full p-[11px]">
-                  <Link href={b.href} className="block">
-                    <img src={b.image.src} width={b.image.width} height={b.image.height} alt={b.name} title={b.name} className="block max-w-full rounded-[5px] align-middle" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="dcore-brands relative block overflow-hidden pt-[5px] pb-[10px]">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-[1] w-[30px] bg-[linear-gradient(90deg,#f0fafe,transparent)]" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-[1] w-[30px] bg-[linear-gradient(270deg,#f0fafe,transparent)]" />
+      <div className="dcore-brands-track flex w-max">
+        {list("a")}
+        {list("b", true)}
       </div>
     </div>
   );

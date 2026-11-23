@@ -3,19 +3,19 @@ import type { HomeData } from "@/types/home";
 
 export const home: HomeData = {
   "meta": {
-    "title": "OTECH :: Amazing Technology an Exclusive IT & Networking Store in Bangladesh",
-    "description": "OTECH Technology is one of the best Import based company in Bangladesh IT Industry, with huge numbers of products from different brands.",
-    "keywords": "otech, OTECH Technologies, OTECH-BD, otech-bd, otech.com.bd",
-    "ogImage": "/image/cache/catalog/Brand-ALL/OTECH-100x100-600x315w.jpg.webp"
+    "title": "D CORE Solutions :: IT & Networking Products Store in Bangladesh",
+    "description": "D CORE Solutions - networking, fiber optic, server and power equipment in Bangladesh. Genuine products, clear prices and expert support.",
+    "keywords": "D CORE, D CORE Solutions, dcores.net, IT networking products Bangladesh",
+    "ogImage": "/image/cache/catalog/Brand-ALL/DCORE-100x100-600x315w.jpg.webp"
   },
   "topLeft": [
     {
-      "label": "Welcome To OTECH Technologies",
+      "label": "Welcome To D CORE Solutions",
       "href": "/contact"
     },
     {
-      "label": "+8801844678800",
-      "href": "tel:+8801844678800"
+      "label": "+8801844600030",
+      "href": "tel:+8801844600030"
     }
   ],
   "topRight": [
@@ -33,10 +33,10 @@ export const home: HomeData = {
     }
   ],
   "logo": {
-    "src": "/image/cache/catalog/website/logo/otech-logo-png-600x130.png.webp",
-    "alt": "OTECH Technologies",
-    "width": 600,
-    "height": 130,
+    "src": "/image/logo/dcore-dark.png",
+    "alt": "dcore IT & network solutions",
+    "width": 612,
+    "height": 236,
     "href": "/"
   },
   "headerLinks": [
@@ -579,142 +579,69 @@ export const home: HomeData = {
   ],
   "sliderLeft": [
     {
-      "src": "/image/cache/catalog/website/slider/otech-slider1-810x401w.png.webp",
-      "alt": "OTECH BD",
-      "width": 810,
-      "height": 401,
-      "href": "/otech"
-    },
-    {
-      "src": "/image/cache/catalog/Slider%20Image/OTECH-Home%20Delivery-810x401h.png.webp",
-      "alt": "",
-      "width": 810,
-      "height": 401,
-      "href": "/"
-    },
-    {
-      "src": "/image/cache/catalog/Banner%20Design/OTECH-Rack-Mount-Case-810x401h.jpg.webp",
-      "alt": "",
-      "width": 810,
-      "height": 401,
-      "href": "/rack-mount-pc-casing"
-    },
-    {
-      "src": "/image/cache/catalog/Slider%20Image/Cisco-Nexus-9300-EX-810x401h.jpg.webp",
-      "alt": "Cisco Nexus 9000 Series Switches",
-      "width": 810,
-      "height": 401,
-      "href": "/cisco-nexus-9300-n9k-c93180yc-ex-48x-1025gbe-sfp28-6x-100gbe-qsfp28-network-switch"
-    },
-    {
-      "src": "/image/cache/catalog/Slider%20Image/Huawei-eKit-810x401w.jpg.webp",
-      "alt": "HUAWEI eKit Digital Platform",
-      "width": 810,
-      "height": 401,
-      "href": "/huawei-ekit"
-    },
-    {
-      "src": "/image/cache/catalog/website/slider/02-810x401h.jpg.webp",
-      "alt": "Sunset",
-      "width": 810,
-      "height": 401,
-      "href": "/fiber-optic-accessories/sfp-module"
-    },
-    {
-      "src": "/image/cache/catalog/XikeStor-Banner5-810x401h.jpg.webp",
+      "src": "/image/slider-dcore/xikestor.webp",
       "alt": "XikeStor",
       "width": 810,
       "height": 401,
       "href": "/xikestor"
     },
     {
-      "src": "/image/cache/catalog/website/slider/03-810x401h.jpg.webp",
-      "alt": "Ubiquiti",
+      "src": "/image/slider-dcore/main.webp",
+      "alt": "D CORE",
       "width": 810,
       "height": 401,
-      "href": "/ubiquiti"
+      "href": "/dcore"
     },
     {
-      "src": "/image/cache/catalog/Slider%20Image/MikroTik-Products-Webs-810x401h.jpg.webp",
-      "alt": "MikroTik",
+      "src": "/image/slider-dcore/rack.webp",
+      "alt": "",
       "width": 810,
       "height": 401,
-      "href": "/mikrotik"
+      "href": "/rack-mount-pc-casing"
     },
     {
-      "src": "/image/cache/catalog/Jilong/JILONG-Banner4-810x401h.jpg.webp",
-      "alt": "JILONG",
+      "src": "/image/slider-dcore/nexus.webp",
+      "alt": "Cisco Nexus 9000 Series Switches",
       "width": 810,
       "height": 401,
-      "href": "/jilong"
+      "href": "/cisco-nexus-9300-n9k-c93180yc-ex-48x-1025gbe-sfp28-6x-100gbe-qsfp28-network-switch"
     }
   ],
   "sliderRight": [
     {
-      "src": "/image/cache/catalog/Slider%20Image/10Gb-2-port-560SFP+-Dual-Port-SFP-Card-404x464w.jpg.webp",
+      "src": "/image/slider-dcore/hpe.webp",
       "alt": "HPE 10Gb 2-Port 560SFP+ Ethernet Network Interface Card",
       "width": 404,
       "height": 464,
       "href": "/hp-560sfp-10gbps-2-port-pci-ethernet-adapter%E2%80%93hp-665247-001"
     },
+    
+    
+    
+    
     {
-      "src": "/image/cache/catalog/website/side-slider/ccr2116-12g-4sotech-bd-web-404x464w.jpg.webp",
-      "alt": "CCR2116-12G-4SOTECH-BD-WEB",
-      "width": 404,
-      "height": 464,
-      "href": "/networking/ethernet-router/mikrotik-ccr2116-12g-4s-16-core-arm-cpu-4x-10g-sfp-cloud-core-ethernet-router"
-    },
-    {
-      "src": "/image/cache/catalog/Slider%20Image/Remax-AAA02-814mWh-Rechargeable-Lithium-Battery-Slider-404x464w.jpg.webp",
-      "alt": "Remax AAA02 814mWh Rechargeable Lithium Battery",
-      "width": 404,
-      "height": 464,
-      "href": "/remax-aaa02-814mwh-usb-type-c-rechargeable-lithium-battery"
-    },
-    {
-      "src": "/image/cache/catalog/Slider%20Image/TFN-OPM-Slide-404x464w.jpg.webp",
-      "alt": "TFN-OPM",
-      "width": 404,
-      "height": 464,
-      "href": "/fiber-optic-accessories/optical-power-meter/tfn-v10c-three-in-one-fiber-optic-tester-with-opm-50-26dbm-vfl-10mw-10km-led-light"
-    },
-    {
-      "src": "/image/cache/catalog/Slider%20Image/Intel-OT-ST7220-25GbE-Dual-Port-SFP-Card-OTECH-BD-404x464w.jpg.webp",
-      "alt": "Intel OT-ST7220 10G/25G SFP28 Ethernet Network Card",
-      "width": 404,
-      "height": 464,
-      "href": "/intel-ot-st7220-25gbe-dual-port-sfp-10g25g-xxv710-da2-sfp28-pcie-30-x8-ethernet-network-card"
-    },
-    {
-      "src": "/image/cache/catalog/Slider%20Image/Mellanox-CX4121A-ACAT-CX4-10G-25G-QSFP28-SA-404x464w.jpg.webp",
+      "src": "/image/slider-dcore/mlx.webp",
       "alt": "Mellanox CX4121A-ACAT CX4 10G/25G SFP28 Ethernet Network Card",
       "width": 404,
       "height": 464,
       "href": "/mellanox-cx4121a-acat-cx4-10g25g-sfp28-ethernet-network-card"
     },
     {
-      "src": "/image/cache/catalog/Slider%20Image/S310-24ST4X-P5-Webs-404x464w.jpg.webp",
+      "src": "/image/slider-dcore/s310.webp",
       "alt": "Huawei eKit S310-24ST4X",
       "width": 404,
       "height": 464,
       "href": "/ huawei-ekitengine-s310-24st4x-24-x-ge-sfp-ports-8-sfp-dual-purpose-10-100-1000-4x-10ge-sfp-ports-l2-hybrid-managed-switch"
     },
     {
-      "src": "/image/cache/catalog/website/side-slider/mikrotik-ros-25in-sata-ssd-404x464w.jpg.webp",
+      "src": "/image/slider-dcore/ssd.webp",
       "alt": "mikrotik-ros-25in-sata-ssd",
       "width": 404,
       "height": 464,
       "href": "/component/ssd-solid-state-drive/mikrotik-25in-sata-64gb-ssd-uefi-x86-routeros-64bit-license-level-6"
     },
     {
-      "src": "/image/cache/catalog/website/side-slider/otech-lslider2-404x464w.png.webp",
-      "alt": "Mikrotik RB5009UG+S+IN",
-      "width": 404,
-      "height": 464,
-      "href": "/networking/ethernet-router/mikrotik-rb5009ugsin-1x-10g-sfp-1x25ge-7-port-gigabit-heavy-duty-ethernet-router"
-    },
-    {
-      "src": "/image/cache/catalog/mikrotik/Mikrotik-ROS@NVMe_128GB-404x464w.jpg.webp",
+      "src": "/image/slider-dcore/nvme.webp",
       "alt": "Mikrotik-ROS@NVMe-128GB-Cover",
       "width": 404,
       "height": 464,
@@ -727,13 +654,13 @@ export const home: HomeData = {
   },
   "brands": [
     {
-      "name": "OTECH",
-      "href": "/otech",
+      "name": "D CORE",
+      "href": "/dcore",
       "image": {
-        "src": "/image/cache/catalog/website/brand/otech-brand-150x70.png.webp",
-        "alt": "OTECH",
-        "width": 150,
-        "height": 70
+        "src": "/image/logo/dcore-dark.png",
+        "alt": "D CORE",
+        "width": 612,
+        "height": 236
       }
     },
     {
@@ -747,21 +674,11 @@ export const home: HomeData = {
       }
     },
     {
-      "name": "Intel",
-      "href": "/intel",
+      "name": "HUAWEI",
+      "href": "/huawei",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Intel-150x70-150x70.png.webp",
-        "alt": "Intel",
-        "width": 150,
-        "height": 70
-      }
-    },
-    {
-      "name": "Ubiquiti",
-      "href": "/ubiquiti",
-      "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Ubiquiti-150x70-150x70.png.webp",
-        "alt": "Ubiquiti",
+        "src": "/image/cache/catalog/website/brand/huawei-150x70.png.webp",
+        "alt": "HUAWEI",
         "width": 150,
         "height": 70
       }
@@ -777,31 +694,11 @@ export const home: HomeData = {
       }
     },
     {
-      "name": "VSOL",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=28",
+      "name": "Ubiquiti",
+      "href": "/ubiquiti",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/VSOL-150x70-150x70.png.webp",
-        "alt": "VSOL",
-        "width": 150,
-        "height": 70
-      }
-    },
-    {
-      "name": "BDCOM",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=35",
-      "image": {
-        "src": "/image/cache/catalog/Brand-ALL/BDCOM-150x70-150x70.png.webp",
-        "alt": "BDCOM",
-        "width": 150,
-        "height": 70
-      }
-    },
-    {
-      "name": "ECOM",
-      "href": "/ecom",
-      "image": {
-        "src": "/image/cache/catalog/Brand-ALL/ECOM-150x70-150x70.png.webp",
-        "alt": "ECOM",
+        "src": "/image/cache/catalog/Brand-ALL/Ubiquiti-150x70-150x70.png.webp",
+        "alt": "Ubiquiti",
         "width": 150,
         "height": 70
       }
@@ -817,21 +714,21 @@ export const home: HomeData = {
       }
     },
     {
-      "name": "Altai",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=29",
-      "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Altai-150x70-150x70.png.webp",
-        "alt": "Altai",
-        "width": 150,
-        "height": 70
-      }
-    },
-    {
       "name": "Ruijie Reyee",
       "href": "/index.php?route=product/manufacturer/info&manufacturer_id=38",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Ruijie-Reyee-150x70-150x70.png.webp",
         "alt": "Ruijie Reyee",
+        "width": 150,
+        "height": 70
+      }
+    },
+    {
+      "name": "Aruba",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=31",
+      "image": {
+        "src": "/image/cache/catalog/Brand-ALL/Aruba-150x70-150x70.png.webp",
+        "alt": "Aruba",
         "width": 150,
         "height": 70
       }
@@ -847,21 +744,31 @@ export const home: HomeData = {
       }
     },
     {
-      "name": "ASUS",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=36",
+      "name": "NETGEAR",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=47",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/ASUS-150x70-150x70.png.webp",
-        "alt": "ASUS",
+        "src": "/image/cache/catalog/Brand-ALL/NETGEAR-150x70.png.webp",
+        "alt": "NETGEAR",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "DeepCool",
-      "href": "/deepcool",
+      "name": "Mellanox",
+      "href": "/mellanox",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/DeepCool-150x70.png.webp",
-        "alt": "DeepCool",
+        "src": "/image/cache/catalog/Brand-ALL/Mellanox-150x70.png.webp",
+        "alt": "Mellanox",
+        "width": 150,
+        "height": 70
+      }
+    },
+    {
+      "name": "Intel",
+      "href": "/intel",
+      "image": {
+        "src": "/image/cache/catalog/Brand-ALL/Intel-150x70-150x70.png.webp",
+        "alt": "Intel",
         "width": 150,
         "height": 70
       }
@@ -887,21 +794,61 @@ export const home: HomeData = {
       }
     },
     {
-      "name": "Grandstream",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=98",
+      "name": "Supermicro",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=34",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Grandstream-150x70.png.webp",
-        "alt": "Grandstream",
+        "src": "/image/cache/catalog/Brand-ALL/Supermicro-150x70-150x70.png.webp",
+        "alt": "Supermicro",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "Hikvision",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=37",
+      "name": "VSOL",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=28",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Hikvision-150x70-150x70.png.webp",
-        "alt": "Hikvision",
+        "src": "/image/cache/catalog/Brand-ALL/VSOL-150x70-150x70.png.webp",
+        "alt": "VSOL",
+        "width": 150,
+        "height": 70
+      }
+    },
+    {
+      "name": "BDCOM",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=35",
+      "image": {
+        "src": "/image/cache/catalog/Brand-ALL/BDCOM-150x70-150x70.png.webp",
+        "alt": "BDCOM",
+        "width": 150,
+        "height": 70
+      }
+    },
+    {
+      "name": "C-Data",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=48",
+      "image": {
+        "src": "/image/cache/catalog/Brand-ALL/C-Data-150x70.png.webp",
+        "alt": "C-Data",
+        "width": 150,
+        "height": 70
+      }
+    },
+    {
+      "name": "ECOM",
+      "href": "/ecom",
+      "image": {
+        "src": "/image/cache/catalog/Brand-ALL/ECOM-150x70-150x70.png.webp",
+        "alt": "ECOM",
+        "width": 150,
+        "height": 70
+      }
+    },
+    {
+      "name": "Altai",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=29",
+      "image": {
+        "src": "/image/cache/catalog/Brand-ALL/Altai-150x70-150x70.png.webp",
+        "alt": "Altai",
         "width": 150,
         "height": 70
       }
@@ -917,21 +864,21 @@ export const home: HomeData = {
       }
     },
     {
-      "name": "Finisar",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=80",
+      "name": "E-Link",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=92",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Finisar-150x70.png.webp",
-        "alt": "Finisar",
+        "src": "/image/cache/catalog/Brand-ALL/E-Link-150x70.png.webp",
+        "alt": "E-Link",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "C-Data",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=48",
+      "name": "Finisar",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=80",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/C-Data-150x70.png.webp",
-        "alt": "C-Data",
+        "src": "/image/cache/catalog/Brand-ALL/Finisar-150x70.png.webp",
+        "alt": "Finisar",
         "width": 150,
         "height": 70
       }
@@ -957,81 +904,51 @@ export const home: HomeData = {
       }
     },
     {
-      "name": "E-Link",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=92",
+      "name": "Silicom",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=72",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/E-Link-150x70.png.webp",
-        "alt": "E-Link",
+        "src": "/image/cache/catalog/Brand-ALL/Silicom-150x70.png.webp",
+        "alt": "Silicom",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "HUAWEI",
-      "href": "/huawei",
+      "name": "Micron",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=78",
       "image": {
-        "src": "/image/cache/catalog/website/brand/huawei-150x70.png.webp",
-        "alt": "HUAWEI",
+        "src": "/image/cache/catalog/Brand-ALL/Micron-150x70.png.webp",
+        "alt": "Micron",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "Aruba",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=31",
+      "name": "Samsung",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=113",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Aruba-150x70-150x70.png.webp",
-        "alt": "Aruba",
+        "src": "/image/cache/catalog/Brand-ALL/Samsung-150x70.png.webp",
+        "alt": "Samsung",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "NETGEAR",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=47",
+      "name": "ASUS",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=36",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/NETGEAR-150x70.png.webp",
-        "alt": "NETGEAR",
+        "src": "/image/cache/catalog/Brand-ALL/ASUS-150x70-150x70.png.webp",
+        "alt": "ASUS",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "MARSRIVA",
-      "href": "/marsriva",
+      "name": "DeepCool",
+      "href": "/deepcool",
       "image": {
-        "src": "/image/cache/catalog/website/brand/marsriva-150x70.png.webp",
-        "alt": "MARSRIVA",
-        "width": 150,
-        "height": 70
-      }
-    },
-    {
-      "name": "KSTAR",
-      "href": "/KSTAR",
-      "image": {
-        "src": "/image/cache/catalog/Brand-ALL/KSTAR-150x70.png.webp",
-        "alt": "KSTAR",
-        "width": 150,
-        "height": 70
-      }
-    },
-    {
-      "name": "Huawei eKit",
-      "href": "/huawei-ekit",
-      "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Huawei-eKit-150x70.png.webp",
-        "alt": "Huawei eKit",
-        "width": 150,
-        "height": 70
-      }
-    },
-    {
-      "name": "Mellanox",
-      "href": "/mellanox",
-      "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Mellanox-150x70.png.webp",
-        "alt": "Mellanox",
+        "src": "/image/cache/catalog/Brand-ALL/DeepCool-150x70.png.webp",
+        "alt": "DeepCool",
         "width": 150,
         "height": 70
       }
@@ -1057,208 +974,218 @@ export const home: HomeData = {
       }
     },
     {
-      "name": "Samsung",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=113",
+      "name": "Grandstream",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=98",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Samsung-150x70.png.webp",
-        "alt": "Samsung",
+        "src": "/image/cache/catalog/Brand-ALL/Grandstream-150x70.png.webp",
+        "alt": "Grandstream",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "Silicom",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=72",
+      "name": "Hikvision",
+      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=37",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Silicom-150x70.png.webp",
-        "alt": "Silicom",
+        "src": "/image/cache/catalog/Brand-ALL/Hikvision-150x70-150x70.png.webp",
+        "alt": "Hikvision",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "Micron",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=78",
+      "name": "KSTAR",
+      "href": "/KSTAR",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Micron-150x70.png.webp",
-        "alt": "Micron",
+        "src": "/image/cache/catalog/Brand-ALL/KSTAR-150x70.png.webp",
+        "alt": "KSTAR",
         "width": 150,
         "height": 70
       }
     },
     {
-      "name": "Supermicro",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=34",
+      "name": "MARSRIVA",
+      "href": "/marsriva",
       "image": {
-        "src": "/image/cache/catalog/Brand-ALL/Supermicro-150x70-150x70.png.webp",
-        "alt": "Supermicro",
+        "src": "/image/cache/catalog/website/brand/marsriva-150x70.png.webp",
+        "alt": "MARSRIVA",
+        "width": 150,
+        "height": 70
+      }
+    },
+    {
+      "name": "Huawei eKit",
+      "href": "/huawei-ekit",
+      "image": {
+        "src": "/image/cache/catalog/Brand-ALL/Huawei-eKit-150x70.png.webp",
+        "alt": "Huawei eKit",
         "width": 150,
         "height": 70
       }
     }
   ],
-  "notice": "📢 আপনার প্রয়োজনীয় সকল প্রকার নেটওয়ারর্কিং এক্সেসরিজ ও আইটি পণ্যে 🛒ঘরে বসে অনলাইনে অর্ডার করুন । 📞প্রয়োজনে যোগাযোগ করুন: +8809638448800, +8801844678800, +8801844678801 :: 🛠 পিসি মাইক্রোটিক, সার্ভার, নেটওয়ার্ক কোর রাউটার, কোর সুইচ বিষয়ে অভিজ্ঞ ইঞ্জিনিয়ার এর পরামর্শ নিতে যোগাযোগ করুন: +8801844678801 (WhatsApp) ::",
-  "categoriesTitle": "Featured Category",
-  "categoriesSubtitle": "Check & Get Your Desired Product from Featured Category!",
+  "notice": "📢 নেটওয়ার্কিং ও আইটি পণ্য এখন ঘরে বসেই অর্ডার করুন। :: 📞 অর্ডার ও তথ্যের জন্য কল করুন: 01844600030, 09678800672 :: 🛠 রাউটার, সুইচ, সার্ভার ও ফাইবার সলিউশন নিয়ে বিশেষজ্ঞ পরামর্শ পেতে WhatsApp করুন: +8801844600030 ::",
+  "categoriesTitle": "Popular Categories",
+  "categoriesSubtitle": "Browse our most popular product groups and find what you need faster",
   "categories": [
     {
       "title": "SFP Module",
       "href": "/sfp-module",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/sfp-module-60x60.png.webp",
+        "src": "/image/featured-category/sfp-module.png",
         "alt": "SFP Module image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "Ethernet Adapter",
       "href": "/ethernet-network-adapter",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/ethernet-card-60x60.png.webp",
+        "src": "/image/featured-category/ethernet-adapter.png",
         "alt": "Ethernet Adapter image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "OLT",
       "href": "/olt",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/olt-60x60.png.webp",
+        "src": "/image/featured-category/olt.png",
         "alt": "OLT image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "Splicing Machine",
       "href": "/splicing-machine",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/splicing-machine-60x60.png.webp",
+        "src": "/image/featured-category/splicing-machine.png",
         "alt": "Splicing Machine image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "Network Switch",
       "href": "/network-switch",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/network-switch-60x60.png.webp",
+        "src": "/image/featured-category/network-switch.png",
         "alt": "Network Switch image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "Access Point",
       "href": "/access-point",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/access-point-60x60.png.webp",
+        "src": "/image/featured-category/access-point.png",
         "alt": "Access Point image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "IP Phone",
       "href": "/ip-phone",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/ip-phone-60x60.png.webp",
+        "src": "/image/featured-category/ip-phone.png",
         "alt": "IP Phone image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "WiFi Router",
       "href": "/wifi-router",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/wifi-router-60x60.png.webp",
+        "src": "/image/featured-category/wifi-router.png",
         "alt": "WiFi Router image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "SSD",
       "href": "/ssd-solid-state-drive",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/ssd-60x60.png.webp",
+        "src": "/image/featured-category/ssd.png",
         "alt": "SSD image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "Casing",
       "href": "/casing",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/casing-60x60.png.webp",
+        "src": "/image/featured-category/casing.png",
         "alt": "Casing image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "ONU",
       "href": "/onu",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/onu-60x60.png.webp",
+        "src": "/image/featured-category/onu.png",
         "alt": "ONU image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "UPS",
       "href": "/ups-and-ips",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/ups-60x60.png.webp",
+        "src": "/image/featured-category/ups.png",
         "alt": "UPS image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "Server",
       "href": "/server",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/server-60x60.png.webp",
+        "src": "/image/featured-category/server.png",
         "alt": "Server image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "UTP Cable",
       "href": "/utp-cable",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/utp-cable-60x60.png.webp",
+        "src": "/image/featured-category/utp-cable.png",
         "alt": "UTP Cable image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "Adapter",
       "href": "/ac-dc-adapter",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/adapter-60x60.png.webp",
+        "src": "/image/featured-category/adapter.png",
         "alt": "Adapter image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     },
     {
       "title": "Gadget",
       "href": "/gadget",
       "image": {
-        "src": "/image/cache/catalog/website/featured-category/new/gadget-60x60.png.webp",
+        "src": "/image/featured-category/gadget.png",
         "alt": "Gadget image",
-        "width": 60,
-        "height": 60
+        "width": 56,
+        "height": 56
       }
     }
   ],
@@ -1266,17 +1193,17 @@ export const home: HomeData = {
     {
       "href": "/ubiquiti",
       "image": {
-        "src": "/image/cache/catalog/website/banner/otech-banner3-635x354.jpg.webp",
+        "src": "/image/slider-dcore/home-ubiquiti.webp",
         "alt": "UBIQUITI",
         "width": 635,
         "height": 354
       }
     },
     {
-      "href": "/mikrotik",
+      "href": "/tp-link",
       "image": {
-        "src": "/image/cache/catalog/website/banner/otech-banner4-635x354.jpg.webp",
-        "alt": "mikrotik",
+        "src": "/image/slider-dcore/home-tplink.webp",
+        "alt": "TP-Link",
         "width": 635,
         "height": 354
       }
@@ -1284,28 +1211,28 @@ export const home: HomeData = {
   ],
   "bannersBottom": [
     {
-      "href": "/otech",
+      "href": "/networking/network-switch",
       "image": {
-        "src": "/image/cache/catalog/website/banner/small-banner/otech_Banner1-420x158.jpg.webp",
-        "alt": "Otech",
+        "src": "/image/slider-dcore/home-switch.webp",
+        "alt": "Network Switches",
         "width": 420,
         "height": 158
       }
     },
     {
-      "href": "/jilong",
+      "href": "/server-and-storage/cooler-radiator",
       "image": {
-        "src": "/image/cache/catalog/website/banner/small-banner/otech-offer-banner2-420x158.jpg.webp",
-        "alt": "280T All Rounde",
+        "src": "/image/slider-dcore/home-cooler.webp",
+        "alt": "Cooler & Radiator",
         "width": 420,
         "height": 158
       }
     },
     {
-      "href": "/ubiquiti",
+      "href": "/accessories/usb-cable",
       "image": {
-        "src": "/image/cache/catalog/website/banner/small-banner/otech-offer-banner3-420x158.jpg.webp",
-        "alt": "UniFi Network",
+        "src": "/image/slider-dcore/home-usb.webp",
+        "alt": "USB Cables",
         "width": 420,
         "height": 158
       }
@@ -1678,7 +1605,7 @@ export const home: HomeData = {
     {
       "moduleId": 463,
       "row": 4,
-      "title": "Ethernet Router",
+      "title": "Routers",
       "seeAll": "/ethernet-router",
       "products": [
         {
@@ -1949,13 +1876,13 @@ export const home: HomeData = {
           "name": "MikroTik hAP ax lite (L41G-2axD) 600 Mbps Wi-Fi 6 Router",
           "href": "/mikrotik-hap-ax-lite-l41g-2axd-600-mbps-wi-fi-6-router",
           "image": {
-            "src": "/image/cache/catalog/Mikrotik/hAP%20ax%20lite%20(L41G-2axD)/hAP%20ax%20lite%20(L41G-2axD)otech.com.bd%20(2)-250x250.jpg.webp",
+            "src": "/image/cache/catalog/Mikrotik/hAP%20ax%20lite%20(L41G-2axD)/hAP%20ax%20lite%20(L41G-2axD)dcores.net%20(2)-250x250.jpg.webp",
             "alt": "MikroTik hAP ax lite (L41G-2axD) 600 Mbps Wi-Fi 6 Router",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Mikrotik/hAP%20ax%20lite%20(L41G-2axD)/hAP%20ax%20lite%20(L41G-2axD)otech.com.bd%20(1)-250x250.jpg.webp",
+            "src": "/image/cache/catalog/Mikrotik/hAP%20ax%20lite%20(L41G-2axD)/hAP%20ax%20lite%20(L41G-2axD)dcores.net%20(1)-250x250.jpg.webp",
             "alt": "MikroTik hAP ax lite (L41G-2axD) 600 Mbps Wi-Fi 6 Router",
             "width": 250,
             "height": 250
@@ -2076,7 +2003,7 @@ export const home: HomeData = {
     {
       "moduleId": 462,
       "row": 5,
-      "title": "SFP Modules",
+      "title": "Fiber SFP Modules",
       "seeAll": "/sfp-module",
       "products": [
         {
@@ -2474,7 +2401,7 @@ export const home: HomeData = {
     {
       "moduleId": 464,
       "row": 6,
-      "title": "Ethernet Network Adapter Card",
+      "title": "Network Cards",
       "seeAll": "/ethernet-network-adapter",
       "products": [
         {
@@ -2902,7 +2829,7 @@ export const home: HomeData = {
     {
       "moduleId": 465,
       "row": 7,
-      "title": "Access Point",
+      "title": "Wireless Access Points",
       "seeAll": "/access-point",
       "products": [
         {
@@ -3231,13 +3158,13 @@ export const home: HomeData = {
           "name": "Ruijie RG-RAP6262(G) AX1800 Dual Band Outdoor Wi-Fi6 Access Point",
           "href": "/ruijie-rg-rap6262g-ax1800-dual-band-outdoor-wi-fi6-access-point",
           "image": {
-            "src": "/image/cache/catalog/Ruijie%20Reyee/RG-RAP6262(G)/RG-RAP6262(G)-Otech.com%20(3)-250x250.jpg.webp",
+            "src": "/image/cache/catalog/Ruijie%20Reyee/RG-RAP6262(G)/RG-RAP6262(G)-Dcore.com%20(3)-250x250.jpg.webp",
             "alt": "Ruijie RG-RAP6262(G) AX1800 Dual Band Outdoor Wi-Fi6 Access Point",
             "width": 250,
             "height": 250
           },
           "imageSecond": {
-            "src": "/image/cache/catalog/Ruijie%20Reyee/RG-RAP6262(G)/RG-RAP6262(G)-Otech.com%20(5)-250x250.jpg.webp",
+            "src": "/image/cache/catalog/Ruijie%20Reyee/RG-RAP6262(G)/RG-RAP6262(G)-Dcore.com%20(5)-250x250.jpg.webp",
             "alt": "Ruijie RG-RAP6262(G) AX1800 Dual Band Outdoor Wi-Fi6 Access Point",
             "width": 250,
             "height": 250
@@ -3323,7 +3250,7 @@ export const home: HomeData = {
       "n": 0
     },
     {
-      "href": "https://api.whatsapp.com/send?phone=8801844678806",
+      "href": "https://api.whatsapp.com/send?phone=8801844600030",
       "n": 0
     }
   ]

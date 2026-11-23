@@ -8,13 +8,13 @@ function Item({ node, level, first, onNavigate }: { node: MenuNode; level: numbe
   const [open, setOpen] = useState(false);
   const kids = node.children;
   const top = level === 0;
-  const pad = top ? "py-[10px] pr-[10px] pl-0 text-[13px] leading-[24.7px]" : level === 1 ? "bg-[#f8f8f8] py-[8px] pr-[8px] pl-[33px] text-[15px] leading-[28.5px]" : "bg-[#f8f8f8] py-[8px] pr-[8px] pl-[40px] text-[15px] leading-[28.5px]";
+  const pad = top ? "py-[10px] pr-[10px] pl-0 text-[13px] leading-[24.7px]" : level === 1 ? "bg-[#f0fafe] py-[8px] pr-[8px] pl-[33px] text-[15px] leading-[28.5px]" : "bg-[#f0fafe] py-[8px] pr-[8px] pl-[40px] text-[15px] leading-[28.5px]";
   return (
     <li className="relative">
       <Link
         href={node.href}
         onClick={onNavigate}
-        className={`relative flex items-center outline-none ${pad} ${top ? "font-medium" : "font-normal"} ${open ? "text-[#db2427]" : top ? "text-[#333]" : "text-[#696973]"} ${first ? "" : "border-t border-[#e2e2e2]"}`}
+        className={`relative flex items-center outline-none ${pad} ${top ? "font-medium" : "font-normal"} ${open ? "text-[#01aef1]" : top ? "text-[#000000]" : "text-[#00000099]"} ${first ? "" : "border-t border-[#0000001f]"}`}
       >
         <span className="block overflow-hidden">{node.label}</span>
         {kids && (
@@ -31,13 +31,13 @@ function Item({ node, level, first, onNavigate }: { node: MenuNode; level: numbe
           >
             <i
               style={{ "--i": `"${open ? "" : ""}"` } as CSSProperties}
-              className="block h-[21px] w-[20px] before:inline before:font-[icomoon] before:text-[20px] before:leading-[21px] before:text-[#8b9198] before:content-(--i)"
+              className="block h-[21px] w-[20px] before:inline before:font-[icomoon] before:text-[20px] before:leading-[21px] before:text-[#00000099] before:content-(--i)"
             />
           </span>
         )}
       </Link>
       {kids && open && (
-        <div className="border-t border-[#e2e2e2]">
+        <div className="border-t border-[#0000001f]">
           <ul className="flex flex-col overflow-hidden">
             {kids.map((k, i) => (
               <Item key={k.href + i} node={k} level={level + 1} first={i === 0} onNavigate={onNavigate} />
@@ -52,9 +52,38 @@ function Item({ node, level, first, onNavigate }: { node: MenuNode; level: numbe
 export default function MobileMenu({ menu, onNavigate }: { menu: MenuNode[]; onNavigate: () => void }) {
   return (
     <div className="h-[calc(100%-0px)] overflow-x-hidden overflow-y-auto p-[10px]">
-      <ul className="flex flex-col overflow-hidden bg-[#f2f3f7]">
+      <ul className="flex flex-col overflow-hidden bg-[#f0fafe]">
         {menu.map((n, i) => (
           <Item key={n.href} node={n} level={0} first={i === 0} onNavigate={onNavigate} />
+        ))}
+        {[
+          { label: "Blog", href: "/blog" },
+          { label: "Brands", href: "/brands" },
+        ].map((l) => (
+          <li key={l.href} className="relative">
+            <Link
+              href={l.href}
+              onClick={onNavigate}
+              className="block border-t border-[#0000001f] py-[10px] pr-[10px] pl-0 text-[13px] leading-[24.7px] font-medium text-[#01aef1]"
+            >
+              {l.label}
+            </Link>
+          </li>
+        ))}
+        {[
+          { label: "Corporate Deal", popup: 379 },
+          { label: "Become A dealer", popup: 378 },
+        ].map((l) => (
+          <li key={l.popup} className="relative">
+            <a
+              href="#"
+              data-popup={l.popup}
+              onClick={onNavigate}
+              className="block border-t border-[#0000001f] py-[10px] pr-[10px] pl-0 text-[13px] leading-[24.7px] font-medium text-[#01aef1]"
+            >
+              {l.label}
+            </a>
+          </li>
         ))}
       </ul>
     </div>
