@@ -3,21 +3,28 @@ import path from "node:path";
 import type { Category } from "@/types/category";
 
 // The PC Builder: every part (slot) takes its products from one category file.
-export type Slot = { id: string; name: string; icon: string; category: string; required?: boolean; group: "core" | "other" };
+export type Slot = { id: string; name: string; icon: string; category: string[]; required?: boolean; group: "core" | "other" };
 export type BuilderProduct = { id: string; name: string; href: string; image: string; price: number; oldPrice: number; brand: string; model: string };
 
+// Same parts, names and order as the Start Tech PC Builder. A part whose category is not in the shop yet stays in the list (no products).
 export const SLOTS: Slot[] = [
-  { id: "cpu", name: "CPU", icon: "cpu", category: "component__processor", required: true, group: "core" },
-  { id: "cooler", name: "CPU Cooler", icon: "cooler", category: "component__cpu-cooler", group: "core" },
-  { id: "board", name: "Motherboard", icon: "board", category: "component__motherboard", required: true, group: "core" },
-  { id: "ram", name: "RAM", icon: "ram", category: "component__ram", required: true, group: "core" },
-  { id: "storage", name: "Storage", icon: "storage", category: "component__ssd-solid-state-drive", required: true, group: "core" },
-  { id: "psu", name: "Power Supply", icon: "psu", category: "component__power-supply", group: "core" },
-  { id: "case", name: "Casing", icon: "case", category: "component__casing", group: "core" },
-  { id: "monitor", name: "Monitor", icon: "monitor", category: "component__monitor", group: "other" },
-  { id: "fan", name: "Casing Cooler", icon: "fan", category: "component__casing-cooler", group: "other" },
-  { id: "keyboard", name: "Keyboard", icon: "keyboard", category: "component__keyboard", group: "other" },
-  { id: "paste", name: "Thermal Paste", icon: "paste", category: "component__thermal-paste", group: "other" },
+  { id: "cpu", name: "CPU", icon: "cpu", category: ["component__processor"], required: true, group: "core" },
+  { id: "cooler", name: "CPU Cooler", icon: "cooler", category: ["component__cpu-cooler"], group: "core" },
+  { id: "board", name: "Motherboard", icon: "board", category: ["component__motherboard"], required: true, group: "core" },
+  { id: "ram", name: "RAM", icon: "ram", category: ["component__ram"], required: true, group: "core" },
+  { id: "storage", name: "Storage", icon: "storage", category: ["component__ssd-solid-state-drive"], required: true, group: "core" },
+  { id: "gpu", name: "Graphics Card", icon: "gpu", category: ["component__graphics-card"], group: "core" },
+  { id: "psu", name: "Power Supply", icon: "psu", category: ["component__power-supply"], group: "core" },
+  { id: "case", name: "Casing", icon: "case", category: ["component__casing"], group: "core" },
+  { id: "monitor", name: "Monitor", icon: "monitor", category: ["component__monitor"], group: "other" },
+  { id: "fan", name: "Casing Cooler", icon: "fan", category: ["component__casing-cooler"], group: "other" },
+  { id: "keyboard", name: "Keyboard", icon: "keyboard", category: ["component__keyboard"], group: "other" },
+  { id: "mouse", name: "Mouse", icon: "mouse", category: ["component__mouse"], group: "other" },
+  { id: "speaker", name: "Speaker & Home Theater", icon: "speaker", category: ["component__speaker"], group: "other" },
+  { id: "headphone", name: "Headphone", icon: "headphone", category: ["component__headphone"], group: "other" },
+  { id: "lan", name: "Wifi Adapter / LAN Card", icon: "lan", category: ["networking__wireless-network-card", "networking__ethernet-network-adapter"], group: "other" },
+  { id: "antivirus", name: "Anti Virus", icon: "antivirus", category: ["component__anti-virus"], group: "other" },
+  { id: "ups", name: "UPS", icon: "ups", category: ["ups-and-ips__offline-ups", "ups-and-ips__online-ups"], group: "other" },
 ];
 
 const dir = path.join(process.cwd(), "src/data/categories");
@@ -27,15 +34,18 @@ const num = (s: string | null) => (s ? Number(s.replace(/[^\d.]/g, "")) || 0 : 0
 export function builderProducts(): Record<string, BuilderProduct[]> {
   const out: Record<string, BuilderProduct[]> = {};
   for (const s of SLOTS) {
-    const file = path.join(dir, s.category + ".json");
-    if (!fs.existsSync(file)) {
-      out[s.id] = [];
-      continue;
+    const seen = new Set<string>();
+    out[s.id] = [];
+    for (const cat of s.category) {
+      const file = path.join(dir, cat + ".json");
+      if (!fs.existsSync(file)) continue;
+      const c = JSON.parse(fs.readFileSync(file, "utf8")) as Category;
+      for (const p of c.products) {
+        if (num(p.price) <= 0 || seen.has(p.id)) continue;
+        seen.add(p.id);
+        out[s.id].push({ id: p.id, name: p.name, href: p.href, image: p.image?.src ?? "", price: num(p.price), oldPrice: num(p.oldPrice), brand: p.brand?.name ?? "", model: p.model ?? "" });
+      }
     }
-    const c = JSON.parse(fs.readFileSync(file, "utf8")) as Category;
-    out[s.id] = c.products
-      .filter((p) => num(p.price) > 0)
-      .map((p) => ({ id: p.id, name: p.name, href: p.href, image: p.image?.src ?? "", price: num(p.price), oldPrice: num(p.oldPrice), brand: p.brand?.name ?? "", model: p.model ?? "" }));
   }
   return out;
 }

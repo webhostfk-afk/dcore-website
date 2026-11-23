@@ -22,7 +22,14 @@ const PATHS: Record<string, string> = {
   keyboard: "M3 7h18v10H3zM6 10h1M9 10h1M12 10h1M15 10h1M18 10h.01M7 14h10",
   paste: "M9 3h6v5l2 3v10H7V11l2-3zM9 14h6",
 };
-function Icon({ name, size = 30 }: { name: string; size?: number }) {
+// Start Tech style part icons (public/image/pcb), recoloured to the D CORE logo blue
+const FILES: Record<string, string> = {
+  cpu: "cpu", cooler: "cooler", board: "motherboard", ram: "ram", storage: "hdd", psu: "psupply", case: "casing",
+  monitor: "monitor", speaker: "speaker-and-home-theater", lan: "lan-card", antivirus: "antivirus", fan: "casing-cooler", keyboard: "keyboard", mouse: "mouse", headphone: "headphone", ups: "ups", gpu: "gcard",
+};
+function Icon({ name, size = 36 }: { name: string; size?: number }) {
+  const f = FILES[name];
+  if (f) return <img src={"/image/pcb/" + f + ".svg"} alt="" width={size} height={size} className="block" style={{ width: size, height: size }} />;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d={PATHS[name] ?? PATHS.board} />
