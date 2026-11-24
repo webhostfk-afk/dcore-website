@@ -15,7 +15,7 @@ const offices = [
   { title: "Email", text: "info@dcores.net", href: "mailto:info@dcores.net", icon: ICON.mail },
 ];
 
-const links: { label: string; href: string; popup?: number }[] = [
+const links: { label: string; href: string; popup?: number; mobileOnly?: boolean }[] = [
   { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "/contact" },
   { label: "Terms & Conditions", href: "/terms-and-conditions" },
@@ -23,6 +23,8 @@ const links: { label: string; href: string; popup?: number }[] = [
   { label: "Refund & Return Policy", href: "/refund-and-return-policy" },
   { label: "Online Delivery", href: "/delivery" },
   { label: "EMI", href: "/emi" },
+  { label: "Blog", href: "/blog", mobileOnly: true },
+  { label: "Brands", href: "/brands", mobileOnly: true },
 ];
 
 const socials = [
@@ -104,7 +106,7 @@ export default function Footer() {
             <Heading>Quick Links</Heading>
             <ul className="grid grid-cols-1 gap-y-[2px] max-[561px]:grid-cols-2 max-[561px]:gap-x-[10px]">
               {links.map((l) => (
-                <li key={l.label}>
+                <li key={l.label} className={l.mobileOnly ? "min-[1025px]:hidden" : undefined}>
                   <Link
                     href={l.href}
                     {...(l.popup ? { "data-popup": l.popup } : {})}

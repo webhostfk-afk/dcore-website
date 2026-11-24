@@ -6,6 +6,7 @@ import AskPriceModal, { type PriceRequest } from "./AskPriceModal";
 import ModulePopup from "./ModulePopup";
 import Toasts, { type ToastItem } from "./Toasts";
 import { cartStore, compareStore, type CartItem, type CompareItem } from "@/lib/shop-store";
+import { api, getCustomer, setCustomer } from "@/lib/customer";
 
 type Toast = ToastItem;
 export type { PriceRequest };
@@ -108,17 +109,41 @@ export default function ShopProvider({ children }: { children: React.ReactNode }
   const removeFromCompare = useCallback((id: string) => compareStore.set(compareStore.getSnapshot().filter((i) => i.id !== id)), []);
 
   const wishlist: Shop["wishlist"] = useCallback(
-    (p) =>
-      notify({
-        className: "notification-wishlist",
-        image: p.image,
-        title: p.name,
-        message: (
-          <>
-            You must <Link href="/login">login</Link> or <Link href="/register">create an account</Link> to save <Link href={p.href}>{p.name}</Link> to your <Link href="/wishlist">wish list</Link>!
-          </>
-        ),
-      }),
+    (p) => {
+      const me = getCustomer();
+      if (!me) {
+        notify({
+          className: "notification-wishlist",
+          image: p.image,
+          title: p.name,
+          message: (
+            <>
+              You must <Link href="/login">login</Link> or <Link href="/register">create an account</Link> to save <Link href={p.href}>{p.name}</Link> to your <Link href="/wishlist">wish list</Link>!
+            </>
+          ),
+        });
+        return;
+      }
+      api<{ ids: string[]; added: boolean }>("/api/account/wishlist", { href: p.href })
+        .then((r) => {
+          setCustomer({ ...me, wishlist: r.ids });
+          notify({
+            className: "notification-wishlist",
+            image: p.image,
+            title: p.name,
+            message: r.added ? (
+              <>
+                Success: You have added <Link href={p.href}>{p.name}</Link> to your <Link href="/wishlist">wish list</Link>!
+              </>
+            ) : (
+              <>
+                <Link href={p.href}>{p.name}</Link> has been removed from your <Link href="/wishlist">wish list</Link>.
+              </>
+            ),
+          });
+        })
+        .catch(() => {});
+    },
     [notify],
   );
 

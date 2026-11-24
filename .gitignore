@@ -43,3 +43,6 @@ next-env.d.ts
 # chat inbox and local secrets
 .chat-data/
 .env.local
+
+# customer accounts and orders (local file store)
+.data/

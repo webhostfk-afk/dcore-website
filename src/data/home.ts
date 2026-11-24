@@ -29,7 +29,7 @@ export const home: HomeData = {
     },
     {
       "label": "Register",
-      "href": "/index.php?route=account/register"
+      "href": "/register"
     }
   ],
   "logo": {
@@ -705,7 +705,7 @@ export const home: HomeData = {
     },
     {
       "name": "Juniper",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=32",
+      "href": "/juniper",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Juniper-150x70-150x70.png.webp",
         "alt": "Juniper",
@@ -715,7 +715,7 @@ export const home: HomeData = {
     },
     {
       "name": "Ruijie Reyee",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=38",
+      "href": "/ruijie-reyee",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Ruijie-Reyee-150x70-150x70.png.webp",
         "alt": "Ruijie Reyee",
@@ -725,7 +725,7 @@ export const home: HomeData = {
     },
     {
       "name": "Aruba",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=31",
+      "href": "/aruba",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Aruba-150x70-150x70.png.webp",
         "alt": "Aruba",
@@ -745,7 +745,7 @@ export const home: HomeData = {
     },
     {
       "name": "NETGEAR",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=47",
+      "href": "/netgear",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/NETGEAR-150x70.png.webp",
         "alt": "NETGEAR",
@@ -795,7 +795,7 @@ export const home: HomeData = {
     },
     {
       "name": "Supermicro",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=34",
+      "href": "/supermicro",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Supermicro-150x70-150x70.png.webp",
         "alt": "Supermicro",
@@ -805,7 +805,7 @@ export const home: HomeData = {
     },
     {
       "name": "VSOL",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=28",
+      "href": "/vsol",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/VSOL-150x70-150x70.png.webp",
         "alt": "VSOL",
@@ -815,7 +815,7 @@ export const home: HomeData = {
     },
     {
       "name": "BDCOM",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=35",
+      "href": "/bdcom",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/BDCOM-150x70-150x70.png.webp",
         "alt": "BDCOM",
@@ -825,7 +825,7 @@ export const home: HomeData = {
     },
     {
       "name": "C-Data",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=48",
+      "href": "/c-data",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/C-Data-150x70.png.webp",
         "alt": "C-Data",
@@ -845,7 +845,7 @@ export const home: HomeData = {
     },
     {
       "name": "Altai",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=29",
+      "href": "/altai",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Altai-150x70-150x70.png.webp",
         "alt": "Altai",
@@ -865,7 +865,7 @@ export const home: HomeData = {
     },
     {
       "name": "E-Link",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=92",
+      "href": "/e-link",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/E-Link-150x70.png.webp",
         "alt": "E-Link",
@@ -875,7 +875,7 @@ export const home: HomeData = {
     },
     {
       "name": "Finisar",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=80",
+      "href": "/finisar",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Finisar-150x70.png.webp",
         "alt": "Finisar",
@@ -905,7 +905,7 @@ export const home: HomeData = {
     },
     {
       "name": "Silicom",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=72",
+      "href": "/silicom",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Silicom-150x70.png.webp",
         "alt": "Silicom",
@@ -915,7 +915,7 @@ export const home: HomeData = {
     },
     {
       "name": "Micron",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=78",
+      "href": "/micron",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Micron-150x70.png.webp",
         "alt": "Micron",
@@ -925,7 +925,7 @@ export const home: HomeData = {
     },
     {
       "name": "Samsung",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=113",
+      "href": "/samsung",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Samsung-150x70.png.webp",
         "alt": "Samsung",
@@ -935,7 +935,7 @@ export const home: HomeData = {
     },
     {
       "name": "ASUS",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=36",
+      "href": "/asus",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/ASUS-150x70-150x70.png.webp",
         "alt": "ASUS",
@@ -955,7 +955,7 @@ export const home: HomeData = {
     },
     {
       "name": "PC Power",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=86",
+      "href": "/pc-power",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/PC-Power-150x70.png.webp",
         "alt": "PC Power",
@@ -965,7 +965,7 @@ export const home: HomeData = {
     },
     {
       "name": "COOLSERVER",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=106",
+      "href": "/coolserver",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/COOLSERVER-150x70.png.webp",
         "alt": "COOLSERVER",
@@ -975,7 +975,7 @@ export const home: HomeData = {
     },
     {
       "name": "Grandstream",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=98",
+      "href": "/grandstream",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Grandstream-150x70.png.webp",
         "alt": "Grandstream",
@@ -985,7 +985,7 @@ export const home: HomeData = {
     },
     {
       "name": "Hikvision",
-      "href": "/index.php?route=product/manufacturer/info&manufacturer_id=37",
+      "href": "/hikvision",
       "image": {
         "src": "/image/cache/catalog/Brand-ALL/Hikvision-150x70-150x70.png.webp",
         "alt": "Hikvision",

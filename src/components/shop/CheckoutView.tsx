@@ -1,5 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
+import { api, useCustomer } from "@/lib/customer";
 import Link from "next/link";
 import { useState, type CSSProperties } from "react";
 import { DISTRICTS } from "@/lib/bd";
@@ -43,7 +44,15 @@ export default function CheckoutView() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [agree, setAgree] = useState(false);
   const [alert, setAlert] = useState<{ kind: "danger" | "success"; text: string } | null>(null);
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState<string | null>(null);
+  const [sending, setSending] = useState(false);
+  const me = useCustomer();
+  // a signed-in customer starts with the saved details (set once while rendering)
+  const [prefilled, setPrefilled] = useState(false);
+  if (me && !prefilled) {
+    setPrefilled(true);
+    setF((s) => ({ ...s, firstname: s.firstname || me.name, email: s.email || me.email, telephone: s.telephone || me.phone, address_1: s.address_1 || me.address, zone: s.zone || me.city || "Dhaka" }));
+  }
 
   const sub = cartTotal(cart);
   const delivery = deliveryFor(f.zone);
@@ -52,7 +61,8 @@ export default function CheckoutView() {
   const set = (k: keyof Fields) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => setF((s) => ({ ...s, [k]: e.target.value }));
   const err = (k: string) => (errors[k] ? <div className="mt-[5px] text-[14px] text-[#01aef1]">{errors[k]}</div> : null);
 
-  const confirm = () => {
+  const confirm = async () => {
+    if (sending) return;
     const problems: Record<string, string> = {};
     if (f.firstname.length < 1 || f.firstname.length > 32) problems.firstname = "Full Name must be between 1 and 32 characters!";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) problems.email = "E-Mail Address does not appear to be valid!";
@@ -63,9 +73,26 @@ export default function CheckoutView() {
     if (cart.length === 0) return setAlert({ kind: "danger", text: "Your shopping cart is empty!" });
     if (Object.keys(problems).length) return setAlert({ kind: "danger", text: "Warning: Please check the form carefully for errors!" });
     if (!agree) return setAlert({ kind: "danger", text: "Warning: You must agree to the Privacy Policy, Terms & Conditions, and Refund & Return Policy!" });
-    clearCart();
-    setDone(true);
-    window.scrollTo({ top: 0 });
+    setSending(true);
+    try {
+      const r = await api<{ number: string }>("/api/orders", {
+        name: f.firstname,
+        phone: f.telephone,
+        email: f.email,
+        address: f.address_1,
+        city: f.zone,
+        shipping: chosen.label,
+        payment: pay,
+        shippingFee: shipPrice,
+        items: cart.map((i) => ({ id: i.id, qty: i.qty })),
+      });
+      clearCart();
+      setDone(r.number);
+      window.scrollTo({ top: 0 });
+    } catch (e) {
+      setAlert({ kind: "danger", text: (e as Error).message });
+    }
+    setSending(false);
   };
 
   const qtyOf = (id: string, q: number) => edits[id] ?? String(q);
@@ -99,13 +126,17 @@ export default function CheckoutView() {
     });
   };
 
-  if (done)
+  if (done !== null)
     return (
       <div className="text-[15px] leading-[28.5px] font-medium text-[#000000]">
         <PageTitle>Your order has been placed!</PageTitle>
         <div className="mx-auto w-full max-w-[1280px]">
           <div className="py-[20px] max-[1301px]:px-[20px] max-[1301px]:pt-0 max-[1301px]:pb-[20px] max-[471px]:p-[5px]">
             <p>Your order has been successfully processed!</p>
+            <p className="mt-[10px]">
+              Your order number is <b className="text-[#01aef1]">#{done}</b>.{" "}
+              {me ? <Link href="/account#orders" className="text-[#01aef1]">View it in your account</Link> : <>Create an account with the same phone number to see your orders: <Link href="/register" className="text-[#01aef1]">Register</Link>.</>}
+            </p>
             <p className="mt-[10px]">
               Please direct any questions you have to the{" "}
               <Link href="/contact" className="text-[#01aef1]">

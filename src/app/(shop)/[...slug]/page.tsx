@@ -9,13 +9,16 @@ import ProductDetail from "@/components/product/ProductDetail";
 import RelatedProducts from "@/components/product/RelatedProducts";
 import { allCategorySlugs, getCategory, siblingProducts } from "@/lib/categories";
 import { allProductSlugs, getProduct } from "@/lib/products";
+import { allBrands, brandCategory, getBrand } from "@/lib/brands";
 
 export const instant = false;
 
 // html classes of the category pages (the root layout carries the home page's)
 
 export function generateStaticParams() {
-  return [...allCategorySlugs(), ...allProductSlugs()].map((slug) => ({ slug }));
+  const taken = new Set([...allCategorySlugs(), ...allProductSlugs()].map((s) => s.join("/")));
+  const brands = [...allBrands().keys()].filter((b) => !taken.has(b)).map((b) => [b]);
+  return [...allCategorySlugs(), ...allProductSlugs(), ...brands].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
@@ -23,7 +26,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const c = getCategory(slug);
   if (!c) {
     const pr = getProduct(slug);
-    if (!pr) return { title: "D CORE Solutions" };
+    if (!pr) {
+      const br = slug.length === 1 ? getBrand(slug[0]) : null;
+      if (br) {
+        const bm = brandCategory(br).meta;
+        return { title: bm.title, description: bm.description, keywords: bm.keywords };
+      }
+      return { title: "D CORE Solutions" };
+    }
     const pm = pr.meta;
     return { title: pm.title, description: pm.description, keywords: pm.keywords, openGraph: { title: pm.title, description: pm.description, images: pm.ogImage ? [pm.ogImage] : [] } };
   }
@@ -38,6 +48,21 @@ export default async function Page({ params }: { params: Promise<{ slug: string[
   if (!cat) {
     const prod = getProduct(slug);
     if (prod) return <ProductView prod={prod} short={slug.length === 1} />;
+    const brand = slug.length === 1 ? getBrand(slug[0]) : null;
+    if (brand) {
+      const data = brandCategory(brand);
+      return (
+        <>
+          <Header>
+            <Breadcrumb items={data.breadcrumb} />
+            <h1 className="sr-only">{data.heading}</h1>
+            <CategoryBrowser data={data} refine={[]} />
+            <Footer />
+          </Header>
+          <SideMenu />
+        </>
+      );
+    }
     // Placeholder for every inner page (product, cart ...) that is not cloned yet.
     return (
       <>

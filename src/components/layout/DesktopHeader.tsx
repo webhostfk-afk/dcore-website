@@ -5,6 +5,7 @@ import { useState, type CSSProperties } from "react";
 import { home } from "@/data/home";
 import { useShop } from "@/components/shop/ShopProvider";
 import { cartCount } from "@/lib/shop-store";
+import { signOut, useCustomer } from "@/lib/customer";
 import { CartDropdown, Search, glyph } from "./HeaderParts";
 import DesktopMenu from "./DesktopMenu";
 
@@ -42,7 +43,11 @@ function Cart() {
 
 function Account() {
   const [open, setOpen] = useState(false);
-  const items = home.topRight.slice(1);
+  const me = useCustomer();
+  // signed out: Log in / Register; signed in: My Account / Wishlist / Logout
+  const items: { label: string; href: string; out?: boolean }[] = me
+    ? [{ label: "My Account", href: "/account" }, { label: "Wishlist", href: "/account#wishlist" }, { label: "Logout", href: "/login", out: true }]
+    : home.topRight.slice(1);
   const icons = ["", ""];
   return (
     <li className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
@@ -51,7 +56,7 @@ function Account() {
         style={{ ...glyph(""), "--j": "\"\"" } as CSSProperties}
         className="group relative flex items-center p-[5px] text-left text-[13px] leading-[24.7px] text-white before:mr-[5px] before:block before:h-[18px] before:w-[18px] before:font-[icomoon] before:text-[18px] before:leading-[18px] before:content-(--i) after:mt-[2px] after:block after:rotate-90 after:px-[3px] after:font-[icomoon] after:text-[11px] after:leading-[20.9px] after:content-(--j) hover:text-[#01aef1]"
       >
-        <span className="block overflow-hidden whitespace-nowrap">Account</span>
+        <span className="block max-w-[110px] overflow-hidden text-ellipsis whitespace-nowrap">{me ? me.firstname : "Account"}</span>
       </Link>
       {open && (
         <div className="absolute top-[34.69px] left-1/2 z-[1000] -translate-x-1/2 pt-[10px] text-left">
