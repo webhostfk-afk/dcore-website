@@ -10,21 +10,30 @@ import { cartTotal, money } from "@/lib/shop-store";
 // Icons are glyphs of the "icomoon" font: a CSS variable holds the character, painted by `before:content-(--i)`.
 export const glyph = (code: string) => ({ "--i": `"${code}"` }) as CSSProperties;
 
-type Suggestion = { id: string; name: string; href: string; image: string; price: string | null; oldPrice: string | null; requestPrice: boolean };
+type Suggestion = { id: string; name: string; href: string; image: string; price: string | null; oldPrice: string | null; requestPrice: boolean; label: string | null };
+
+// The stock badge of a suggestion: green "In Stock", red "Out Of Stock", blue for the rest (Pre Order, Up Coming, Call for Price).
+function stockBadge(s: Suggestion): { text: string; cls: string } {
+  const label = (s.label ?? "").trim();
+  if (/out/i.test(label)) return { text: label, cls: "bg-[#fde8e8] text-[#d92d20]" };
+  if (!s.price && s.requestPrice) return { text: "Call for Price", cls: "bg-[#e8f4fe] text-[#0b7bc4]" };
+  if (label && !/in stock/i.test(label) && !/^-?\d+(\.\d+)?\s*%$/.test(label)) return { text: label, cls: "bg-[#e8f4fe] text-[#0b7bc4]" };
+  return { text: "In Stock", cls: "bg-[#dcf7e4] text-[#0b7a3b]" };
+}
 
 // variant "mobile" is the narrower bar that slides under the mobile header.
 export function Search({ variant = "desktop", onDone }: { variant?: "desktop" | "mobile"; onDone?: () => void }) {
   const m = variant === "mobile";
   const router = useRouter();
   const [q, setQ] = useState("");
-  const [list, setList] = useState<{ q: string; items: Suggestion[] }>({ q: "", items: [] });
+  const [list, setList] = useState<{ q: string; total: number; items: Suggestion[] }>({ q: "", total: 0, items: [] });
 
   useEffect(() => {
     if (q.trim().length < 2) return;
     const t = setTimeout(() => {
       fetch(`/api/search?q=${encodeURIComponent(q.trim())}`)
         .then((r) => r.json())
-        .then((items: Suggestion[]) => setList({ q, items }))
+        .then((d: { total: number; items: Suggestion[] }) => setList({ q, total: d.total, items: d.items }))
         .catch(() => {});
     }, 200);
     return () => clearTimeout(t);
@@ -32,37 +41,43 @@ export function Search({ variant = "desktop", onDone }: { variant?: "desktop" | 
 
   const go = () => q.trim() && router.push(`/search?search=${encodeURIComponent(q.trim())}`);
   const shown = list.q === q && q.trim().length >= 2 ? list.items : [];
+  const close = () => {
+    setList({ q: "", total: 0, items: [] });
+    onDone?.();
+  };
   return (
     <div className={`relative w-full ${m ? "h-[35px]" : "h-[40px]"}`}>
       {shown.length > 0 && (
         <div className={`absolute left-0 z-[100] block w-full pt-[10px] ${m ? "top-[35px]" : "top-[40px]"}`}>
-          <div className="max-h-[350px] overflow-y-auto bg-white text-left text-[14px] leading-[26.6px] text-[#000000b3]">
-            {shown.map((s) => (
-              <div key={s.id} className="relative block">
-                <Link
-                  href={s.href}
-                  onClick={() => {
-                    setList({ q: "", items: [] });
-                    onDone?.();
-                  }}
-                  className="inline-block p-[8px] text-[#000000b3]"
-                >
-                  <img src={s.image} width={60} height={60} alt="" className="inline h-[60px] w-[60px]" />
-                  <span className="flex flex-col pr-[5px] pb-[5px] pl-[10px]">
-                    <span className="mb-[2px] block text-[14px] leading-[16.8px] text-[#000000cc]">{s.name}</span>
-                    {s.price &&
-                      (s.oldPrice ? (
-                        <span className="flex items-center">
-                          <span className="block">{s.price}</span>
-                          <span className="mx-[5px] block rounded-[3px] px-[3px] py-[1px] text-[11.2px] leading-[21.28px]">{s.oldPrice}</span>
-                        </span>
-                      ) : (
-                        <span className="flex items-center">{s.price}</span>
-                      ))}
-                  </span>
-                </Link>
-              </div>
-            ))}
+          <div className="overflow-hidden rounded-[12px] border border-[#e1e8f0] bg-white text-left text-[14px] leading-[20px] text-[#000000b3] shadow-[0_28px_56px_-18px_rgba(0,39,65,0.5)]">
+            <div className="flex items-center justify-between gap-[12px] border-b border-[#e8edf4] bg-[#f6f9fd] px-[16px] py-[12px] text-[15px] leading-[22px] font-bold text-[#1877f2]">
+              <span>
+                Showing {shown.length} out of {list.total} products
+              </span>
+              <Link href={`/search?search=${encodeURIComponent(q.trim())}`} onClick={close} className="whitespace-nowrap hover:text-[#01aef1]">
+                View All
+              </Link>
+            </div>
+            <div className="max-h-[min(58vh,520px)] overflow-y-auto overscroll-contain">
+              {shown.map((s) => {
+                const b = stockBadge(s);
+                return (
+                  <Link key={s.id} href={s.href} onClick={close} className="flex items-center gap-[12px] border-b border-[#eef2f7] px-[14px] py-[10px] last:border-b-0 hover:bg-[#f2f7ff]">
+                    <span className="grid h-[56px] w-[56px] flex-none place-items-center overflow-hidden rounded-[8px] border border-[#e4eaf2] bg-white">
+                      {s.image && <img src={s.image} width={56} height={56} alt="" className="h-auto max-h-full w-auto max-w-full object-contain" />}
+                    </span>
+                    <span className="flex min-w-0 flex-1 flex-col gap-[2px]">
+                      <span className="line-clamp-2 text-[14px] leading-[18px] font-semibold text-[#002741]">{s.name}</span>
+                      <span className="flex items-baseline gap-[8px] text-[13px]">
+                        {s.price ? <b className="font-extrabold text-[#002741]">{s.price}</b> : <b className="font-extrabold text-[#002741]">Call for Price</b>}
+                        {s.price && s.oldPrice && <s className="text-[12px] text-[#8a94a3]">{s.oldPrice}</s>}
+                      </span>
+                    </span>
+                    <em className={`flex-none rounded-[8px] px-[10px] py-[5px] text-[12px] leading-[16px] font-bold whitespace-nowrap not-italic ${b.cls}`}>{b.text}</em>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       )}

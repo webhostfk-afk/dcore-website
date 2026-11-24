@@ -30,7 +30,7 @@ function Picker({ taken, onPick, onRemove }: { taken: string[]; onPick: (h: Hit)
     const timer = setTimeout(() => {
       fetch(`/api/search?q=${encodeURIComponent(t)}`, { signal: ctl.signal })
         .then((r) => r.json())
-        .then((l: Hit[]) => setHits(l.filter((x) => !taken.includes(x.id))))
+        .then((d: { items: Hit[] }) => setHits(d.items.filter((x) => !taken.includes(x.id))))
         .catch(() => {});
     }, 200);
     return () => {
